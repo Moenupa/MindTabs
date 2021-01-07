@@ -1,0 +1,28 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+	"name": "MindTabs",
+	"version": "0.1.1", 
+	"description": "Mind map across your tabs. Smart way to organize your web.", 
+    "icons": {
+        "16": "/res/image/logo/MindTabs16.png",
+        "48": "/res/image/logo/MindTabs48.png",
+        "64": "/res/image/logo/MindTabs64.png",
+        "128": "/res/image/logo/MindTabs128.png"
+    },
+	"browser_action": {
+        "default_icon": "/res/image/logo/MindTabs64.png"
+    }, 
+	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+	"background": {
+        "scripts": [
+            "background.js"
+        ]
+    }, 
+	"permissions": [
+        "storage"
+      , "tabs"
+      , "bookmarks"
+    ]
+}
