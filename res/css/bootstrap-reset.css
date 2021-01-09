@@ -2,25 +2,12 @@
 a { color: #32323A; }
     a:hover { color: #222227; }
 .panel { border: medium none; box-shadow: none; }
-.panel-heading { background: none repeat scroll 0 0 #FAFAFA; border-color: #EFF2F7; font-size: 13px; font-weight: 400; padding: 15px; text-transform: uppercase; }
-.panel-title { color: #32323A; /*font-family: 'Open Sans',sans-serif;*/ font-size: 14px; font-weight: 400; margin-bottom: 0; margin-top: 0; }
+.panel-group .panel + .panel { margin-top: 1px; }
 .panel-primary .tools a { color: #FFFFFF; }
 .label { padding: 0.5em 0.8em; }
-.label-default { background-color: #A1A1A1; }
-.label-primary { background-color: #59ACE2; }
-.label-success { background-color: #A9D86E; }
-.label-info { background-color: #8175C7; }
-.label-warning { background-color: #FCB322; }
-.label-danger { background-color: #FF6C60; }
-.label-inverse { background-color: #344860; }
-.text-danger { color: #FF6C60; }
-.text-muted { color: #A1A1A1; }
-.text-primary { color: #59ACE2; }
-.text-warning { color: #FCB322; }
-.text-success { color: #A9D86E; }
-.text-info { color: #8175C7; }
+
 .modal-content { border: medium none; box-shadow: none; }
-.modal-header { background: none repeat scroll 0 0 #FAFAFA; border-radius: 5px 5px 0 0; color: #333333; }
+.modal-header { border-radius: 5px 5px 0 0; }
     .modal-header .close { margin-top: 0; }
 .form-control { border: 1px solid #E2E2E4; box-shadow: none; color: #C2C2C2; }
     .form-control:focus, #focusedInput { border: 1px solid #00A8B3; box-shadow: none; }
@@ -66,6 +53,5 @@ ul { padding-left: 0; }
 .pagination > li > a, .pagination > li > span { background-color: #EFF2F7; border: 1px solid #EFF2F7; float: left; line-height: 1.42857; margin-left: 1px; padding: 6px 12px; position: relative; text-decoration: none; }
     .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus { background-color: #2EB4AD; color: #FFFFFF; }
 .has-success .form-control:focus, .has-error .form-control:focus, .has-warning .form-control:focus { box-shadow: none; }
-.panel-group .panel + .panel { margin-top: 1px; }
 .progress { border-radius: 50px; }
 .progress-bar { box-shadow: none; }
