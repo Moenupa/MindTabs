@@ -14,7 +14,6 @@
     <link rel="stylesheet" type="text/css" href="/res/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/res/css/bootstrap-reset.css" />
     <link rel="stylesheet" type="text/css" href="/res/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="/res/css/icoFont.css" />
     <link rel="stylesheet" type="text/css" href="/res/css/materialdesignicons.min.css" />
     <link rel="stylesheet" type="text/css" href="/res/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/res/css/style-responsive.css" />
@@ -253,7 +252,7 @@
     </section>
     <div id="contextmenu"></div>
     <div class="clearfix"></div>
-    <div aria-hidden="true" role="dialog" tabindex="-1" id="modalInfo" class="modal fade graphiModal">
+    <div aria-hidden="true" role="dialog" tabindex="-1" id="modalInfo" class="modal fade mindTabsModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -269,7 +268,7 @@
                         <div class="clearfix">&nbsp;</div>
                         <img src="res/image/icon/presentation.png" />
                         <p>
-                            MindTabs is a flexible tool able to solve different tasks. This tasks depend on what kind of user you are. Someone will like MindTabs for it's open/close feature. Another will reveal possibilities in suspending tabs + immediate reducing memory used by Chrome. 
+                            MindTabs is a flexible tool able to solve different tasks. This tasks depend on what kind of user you are. Someone will like MindTabs for it's open/close feature. Another will reveal possibilities in suspending tabs + immediate reducing memory used by Chrome.
                         </p>
                         <p>But for every user MindTabs is a big picture with endless deeping & grouping. So find your personal use case & give us feedback.</p>
                     </div>
@@ -289,8 +288,8 @@
                                     <table class="table table-striped table-responsive">
                                         <tr>
                                             <th>&nbsp;</th>
-                                            <th>Action</th>
-                                            <th>Description</th>
+                                            <th>ACTION</th>
+                                            <th>DESCRIPTION</th>
                                         </tr>
                                         <tr>
                                             <td><span class="mdi mdi-window-maximize"></span></td>
@@ -300,32 +299,34 @@
                                         <tr>
                                             <td><small class="mdi mdi-window-close"></small></td>
                                             <td>Close</td>
-                                            <td><small>click to close tab / tab group / window or right click tab/tab group / window & select "Close". 
-                                                    <br />
-                                                <span class="badge bg-primary">!</span>&nbsp;Select any item to perform this action.
-                                                    <br />
-                                                <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> to open last closed tab.</small></td>
+                                            <td>
+                                                <small>
+                                                    click to close tab / tab group / window or right click tab/tab group / window & select "Close". <br />
+                                                    <span class="badge bg-info">!</span>&nbsp;Select any item to perform this action.<br />
+                                                    <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> to open last closed tab.
+                                                </small>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td><span class="mdi mdi-buffer"></span></td>
                                             <td>Suspend</td>
-                                            <td><small>click to save tab / tab group / window or right click tab/tab group / window & select "Suspend". 
+                                            <td><small>click to save tab / tab group / window or right click tab/tab group / window & select "Suspend".
                                                     <br />
-                                                <span class="badge bg-primary">!</span>&nbsp;Select any item to perform this action. </small></td>
+                                                <span class="badge bg-info">!</span>&nbsp;Select any item to perform this action. </small></td>
                                         </tr>
                                         <tr>
                                             <td><span class="mdi mdi-restore"></span></td>
                                             <td>Restore</td>
-                                            <td><small>click to restore suspended tab / tab group / window or right click tab/tab group / window & select "Suspend". 
+                                            <td><small>click to restore suspended tab / tab group / window or right click tab/tab group / window & select "Suspend".
                                                     <br />
-                                                <span class="badge bg-primary">!</span>&nbsp;Select any item to perform this action. </small></td>
+                                                <span class="badge bg-info">!</span>&nbsp;Select any item to perform this action. </small></td>
                                         </tr>
                                         <tr>
                                             <td><span class="mdi mdi-delete"></span></td>
                                             <td>Delete</td>
-                                            <td><small>click to delete suspended tab / tab group / window or right click tab/tab group / window & select "Suspend". 
+                                            <td><small>click to delete suspended tab / tab group / window or right click tab/tab group / window & select "Suspend".
                                                     <br />
-                                                <span class="badge bg-primary">!</span>&nbsp;Select any item to perform this action. </small></td>
+                                                <span class="badge bg-info">!</span>&nbsp;Select any item to perform this action. </small></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -346,7 +347,7 @@
                                     <p>Currently searching by title or URL (even few letters) is available. Start typing any keyword from tab/tab group and get matching results.</p>
                                     <p>Hover any item to know the path for every tab/tab group.</p>
                                     <br />
-                                    <small><span class="badge bg-primary">!</span>&nbsp;Don't forget to clear search box to show all tabs!</small>
+                                    <small><span class="badge bg-info">!</span>&nbsp;Don't forget to clear search box to show all tabs!</small>
                                 </div>
                             </div>
                         </div>
@@ -393,8 +394,8 @@
                                     <p>Use hotkeys for primary access to actions like mode toggling, zooming, moving & refresh.</p>
                                     <table class="table table-striped table-responsive table-centered">
                                         <tr>
-                                            <th>Key</th>
-                                            <th>Description</th>
+                                            <th>KEY</th>
+                                            <th>DESCRIPTION</th>
                                         </tr>
                                         <tr>
                                             <td><kbd><small class="mdi mdi-arrow-up-bold"></small></kbd></td>
@@ -440,7 +441,7 @@
             </div>
         </div>
     </div>
-    <div aria-hidden="true" role="dialog" tabindex="-1" id="modalIntro" class="modal fade graphiModal">
+    <div aria-hidden="true" role="dialog" tabindex="-1" id="modalIntro" class="modal fade mindTabsModal">
         <div class="modal-dialog" style="max-width: 400px">
             <div class="modal-content">
                 <div class="modal-header">
