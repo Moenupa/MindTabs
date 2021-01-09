@@ -8,10 +8,10 @@
     var openTreeView = function(currentTab) {
         var views = chrome.extension.getViews({ type: 'tab' })
         if (views.length == 0) {
-            chrome.tabs.create({active:true, url: "MindTabs.html"}, function(tab){})
+            chrome.tabs.create({active:true, url: "GraphiTabs.html"}, function(tab){})
         } else {
             var view = views[0]
-            var graphiy = view.$item.query({name: 'MindTabs'})
+            var graphiy = view.$item.query({name: 'GraphiTabs'})
             graphiy.open()
         }
     }

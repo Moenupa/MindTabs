@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>MindTabs</title>
-    <link href="/res/image/logo/MindTabs.ico" rel="shortcut icon" type="image/x-icon" />
+    <title>GraphiTabs</title>
+    <link href="/res/image/logo/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
     <!--Libraries-->
     <!--    <link rel="stylesheet" type="text/css" href="/app/lib/jquery-ui/css/ui-lightness/jquery-ui.css">-->
@@ -14,19 +14,17 @@
     <link rel="stylesheet" type="text/css" href="/res/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/res/css/bootstrap-reset.css" />
     <link rel="stylesheet" type="text/css" href="/res/css/font-awesome.css" />
-    <link rel="stylesheet" type="text/css" href="/res/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" type="text/css" href="res/css/icoFont.css" />
     <link rel="stylesheet" type="text/css" href="/res/css/styles.css">
     <link rel="stylesheet" type="text/css" href="/res/css/style-responsive.css" />
 
-    <script src="/res/js/all.js"></script>
-    <style>
-    </style>
+    <script src="/all.js"></script>
 </head>
 <body>
     <section id="container" class="">
         <header class="header fixed-top clearfix">
             <div class="brand">
-                <a class="logo" href="/MindTabs.html">MindTabs</a>
+                <a class="logo" href="/GraphiTabs.html">GraphiTabs</a>
                 <div class="sidebar-toggle-box">
                     <div class="fa fa-bars"></div>
                 </div>
@@ -35,31 +33,19 @@
                 <ul class="nav top-menu">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle tooltips" data-placement="bottom" title="Windows opened">
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 48 48">
-                                <path fill="none" d="M0 0h48v48h-48z" />
-                                <path class="top-status-svg" id="window-outline" d="M38 24h-4v6h-6v4h10v-10zm-24-6h6v-4h-10v10h4v-6zm28-12h-36c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h36c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm0 32.03h-36v-28.06h36v28.06z" />
-                            </svg> -->
-                            <i class="mdi mdi-aspect-ratio"></i>
+                            <object data="/res/image/icon/WindowGrey.svg"></object>
                             <span class="badge bg-success"></span>
                         </a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle tooltips" data-placement="bottom" title="Tabs opened">
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
-                                <path fill="none" d="M0 0h24v24H0V0zm0 0h24v24H0V0z" />
-                                <path class="top-status-svg" id="tab-outline" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h10v4h8v10z" />
-                            </svg> -->
-                            <i class="mdi mdi-tab"></i>
-                            <span class="badge bg-info"></span>
+                            <object data="/res/image/icon/TabGrey.svg"></object>
+                            <span class="badge bg-important"></span>
                         </a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle tooltips" data-placement="bottom" title="Tabs suspended">
-                            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
-                                <path fill="none" d="M0 0h24v24H0V0z" />
-                                <path class="top-status-svg" id="suspend-outline" d="M1 9h2V7H1v2zm0 4h2v-2H1v2zm0-8h2V3c-1.1 0-2 .9-2 2zm8 16h2v-2H9v2zm-8-4h2v-2H1v2zm2 4v-2H1c0 1.1.9 2 2 2zM21 3h-8v5c0 .55.45 1 1 1h9V5c0-1.1-.9-2-2-2zm0 14h2v-2h-2v2zM9 5h2V3H9v2zM5 21h2v-2H5v2zM5 5h2V3H5v2zm16 16c1.1 0 2-.9 2-2h-2v2zm0-8h2v-2h-2v2zm-8 8h2v-2h-2v2zm4 0h2v-2h-2v2z" />
-                            </svg> -->
-                            <i class="mdi mdi-tab-unselected"></i>
+                            <object data="/res/image/icon/SuspendedGroupGrey.svg"></object>
                             <span class="badge bg-warning"></span>
                         </a>
                     </li>
@@ -68,16 +54,16 @@
             <div class="top-nav clearfix">
                 <ul class="nav pull-right top-menu">
                     <li>
-                        <input type="text" placeholder=" Search " class="form-control search searchControl mdi mdi-magnify" />
+                        <input type="text" placeholder=" Search by title or URL" class="form-control search searchControl">
                     </li>
                     <li>
-                        <div class="headerToggleCircle tooltips" data-placement="bottom" title="About MindTabs" data-container="body" data-toggle="modal" data-target="#modalInfo">
-                            <div class="mdi mdi-24px mdi-information-variant"></div>
+                        <div class="headerToggleCircle tooltips" data-placement="bottom" title="About GraphiTabs" data-container="body" data-toggle="modal" data-target="#modalInfo">
+                            <div class="icon-info-2"></div>
                         </div>
                     </li>
                     <li>
-                        <div id="factoryReset" class="headerToggleCircle tooltips" data-placement="bottom" title="Total Reset. Warning: All data erased " data-container="body">
-                            <div class="mdi mdi-24px mdi-restore-alert"></div>
+                        <div id="factoryReset" class="headerToggleCircle tooltips" data-placement="bottom" title="Total reset. All saved data & settings will be deleted. Use in emergencies only" data-container="body">
+                            <div class="icon-wrench"></div>
                         </div>
                     </li>
                 </ul>
@@ -87,42 +73,60 @@
             <div class="nav-collapse" id="sidebar">
                 <div class="leftside-navigation" style="overflow: hidden; height: 100%" tabindex="5000">
                     <ul id="nav-accordion" class="sidebar-menu">
-                        <li id="btnOpen" data-action="Open" class="sub-menu tooltips" data-placement="right" data-container="body" title="Open selected item(s) in browser" >
+                        <li id="btnOpen" data-action="Open" class="sub-menu tooltips" data-placement="right" data-container="body" title="Click to open seleted item">
                             <a href="#">
-                                <i class="mdi mdi-window-maximize"></i>
+                                <i class="icon-new-tab"></i>
                                 <span class="actionName">Open</span>
                             </a>
                         </li>
-                        <li id="btnClose" data-action="Close" class="sub-menu tooltips" data-placement="right" data-container="body" title="Close selected item(s) in browser">
+                        <li id="btnClose" data-action="Close" class="sub-menu tooltips" data-placement="right" data-container="body" title="Click to close seleted item(s)">
                             <a href="#">
-                                <i class="mdi mdi-window-close"></i>
+                                <i class="icon-cancel-2"></i>
                                 <span class="actionName">Close</span>
-                                <span class="dcjq-icon"></span>
-                            </a>
+                                <span class="dcjq-icon"></span></a>
                         </li>
-                        <li id="btnSuspend" data-action="Suspend" class="sub-menu tooltips" data-placement="right" data-container="body" title="Suspend active tabs to inactivate" >
+                        <li id="btnSuspend" data-action="Suspend" class="sub-menu tooltips" data-placement="right" data-container="body" title="Click to suspend seleted item(s)">
                             <a href="#">
-                                <i class="mdi mdi-buffer"></i>
+                                <i class="icon-download-2"></i>
                                 <span class="actionName">Suspend</span>
-                                <span class="dcjq-icon"></span>
-                            </a>
+                                <span class="dcjq-icon"></span></a>
                         </li>
-                        <li id="btnRestore" data-action="Restore" class="sub-menu tooltips" data-placement="right" data-container="body" title="Restore suspended tabs">
+                        <li id="btnRestore" data-action="Restore" class="sub-menu tooltips" data-placement="right" data-container="body" title="Click to restore suspended item(s)">
                             <a href="#">
-                                <i class="mdi mdi-restore"></i>
+                                <i class="icon-upload-3"></i>
                                 <span class="actionName">Restore</span></a>
                         </li>
-                        <li id="btnDelete" data-action="Delete" class="sub-menu tooltips" data-placement="right" data-container="body" title="Delete suspended tabs">
+                        <li id="btnDelete" data-action="Delete" class="sub-menu tooltips" data-placement="right" data-container="body" title="Click to delete suspended item(s)">
                             <a href="#">
-                                <i class="mdi mdi-delete"></i>
+                                <i class="icon-remove"></i>
                                 <span class="actionName">Delete</span>
+                            </a>
+                        </li>
+                        <li class="sub-menu disabled">
+                            <h1>&nbsp;</h1>
+                            <br />
+                            <br />
+                        </li>
+                        <li class="sub-menu disabled tooltips" data-placement="right" data-container="body" title="Save to bookmarks and access cloud bookmarks storage. Feature available next release!">
+                            <a href="#">
+                                <i class="icon-bookmark-2"></i>
+                                <span>Bookmark</span>
+                                <sup class="text-purple">soon</sup>
+                            </a>
+                        </li>
+                        <li class="sub-menu disabled tooltips" data-placement="right" data-container="body" title="Manage multiple browsers. Even from other devices. Feature available next release!">
+                            <a href="#">
+                                <i class="icon-tree-view"></i>
+                                <span>Manage</span>
+                                <sup class="text-purple">soon</sup>
                             </a>
                         </li>
                     </ul>
                     <div class="aboutWrapper text-center">
-                        <a href="http://github.com/Moenupa" class="text-purple">by Moenupa</a>
+                        <a href="http://timedesk.org" target="_blank" class="text-purple">by Timedesk team    
+                        </a>
                         <br />
-                        <small>BETA v0.1.1
+                        <small>Currently in beta version
                         </small>
                     </div>
 
@@ -141,7 +145,7 @@
                 <div class="row">
                     <div id="tree-container" class="treeWrapper">
                         <section class="toolTipWrapper panel" style="margin-bottom: 0; display: none;">
-                            <header class="toolTipInnerName panel-heading mdi mdi-information">
+                            <header class="toolTipInnerName panel-heading icon-info-2">
                                 Tips
                                     <span class="tools pull-right">
                                         <a href="#" class="fa fa-chevron-up tooltips panel-toggler" data-placement="top" title="Show / hide panel"></a>
@@ -152,7 +156,7 @@
                                 <div id="tipsCarousel" class="carousel slide">
                                     <div class="carousel-inner">
                                         <div class="item active">
-                                            <img src="/res/image/logo/backgroundx25.png" alt="">
+                                            <img src="/res/image/carouselBack.jpg" alt="">
                                             <div class="">
                                                 <div class="carousel-caption">
                                                     <p><b>1. Selection</b></p>
@@ -162,7 +166,7 @@
                                             </div>
                                         </div>
                                         <div class="item">
-                                            <img src="/res/image/logo/backgroundx25.png" alt="">
+                                            <img src="/res/image/carouselBack.jpg" alt="">
                                             <div class="container">
                                                 <div class="carousel-caption">
                                                     <p><b>2. Actions</b></p>
@@ -175,7 +179,7 @@
                                             </div>
                                         </div>
                                         <div class="item">
-                                            <img src="/res/image/logo/backgroundx25.png" alt="">
+                                            <img src="/res/image/carouselBack.jpg" alt="">
                                             <div class="container">
                                                 <div class="carousel-caption">
                                                     <p><b>3. Manage view</b></p>
@@ -185,7 +189,7 @@
                                             </div>
                                         </div>
                                         <div class="item">
-                                            <img src="/res/image/logo/backgroundx25.png" alt="">
+                                            <img src="/res/image/carouselBack.jpg" alt="">
                                             <div class="container">
                                                 <div class="carousel-caption">
                                                     <p><b>4. Structure data</b></p>
@@ -195,7 +199,7 @@
                                             </div>
                                         </div>
                                         <div class="item">
-                                            <img src="/res/image/logo/backgroundx25.png" alt="">
+                                            <img src="/res/image/carouselBack.jpg" alt="">
                                             <div class="container">
                                                 <div class="carousel-caption">
                                                     <p><b>5. Filter data</b></p>
@@ -215,32 +219,32 @@
                                 <tr>
                                     <td></td>
                                     <td class="navigationControl" data-direction="up">
-                                        <div class="mdi mdi-arrow-up iconWrapper" title="Move up (&uarr; key)"></div>
+                                        <div class="icon-arrow-up-5 iconWrapper " title="Move up (&uarr; key)"></div>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td class="navigationControl" data-direction="left">
-                                        <div class="mdi mdi-arrow-left iconWrapper" title="Move left (&larr; key)"></div>
+                                        <div class="icon-arrow-left-5 iconWrapper" title="Move left (&larr; key)"></div>
                                     </td>
                                     <td class="navigationControl" data-direction="center">
                                         <div class="iconWrapper" title="Center view">&bull;</div>
                                     </td>
                                     <td class="navigationControl" data-direction="right">
-                                        <div class="mdi mdi-arrow-right iconWrapper" title="Move right (&rarr; key)"></div>
+                                        <div class="icon-arrow-right-5 iconWrapper" title="Move right (&rarr; key)"></div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td></td>
                                     <td class="navigationControl" data-direction="down">
-                                        <div class="mdi mdi-arrow-down iconWrapper" title="Move down (&darr; key)"></div>
+                                        <div class="icon-arrow-down-5 iconWrapper" title="Move down (&darr; key)"></div>
                                     </td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class="iconWrapper transformScale" data-direction="zoom-in"><small class="mdi mdi-magnify-plus" title="Zoom in (&#43; key)"></small></td>
+                                    <td class="iconWrapper transformScale" data-direction="zoom-in"><small class="icon-zoom-in" title="Zoom in (&#43; key)"></small></td>
                                     <td></td>
-                                    <td class="iconWrapper transformScale" data-direction="zoom-out"><small class="mdi mdi-magnify-minus" title="Zoom out (&#45; key)"></small></td>
+                                    <td class="iconWrapper transformScale" data-direction="zoom-out"><small class="icon-zoom-out" title="Zoom out (&#45; key)"></small></td>
                                 </tr>
                             </table>
                         </div>
@@ -252,25 +256,29 @@
     </section>
     <div id="contextmenu"></div>
     <div class="clearfix"></div>
-    <div aria-hidden="true" role="dialog" tabindex="-1" id="modalInfo" class="modal fade mindTabsModal">
+    <div aria-hidden="true" role="dialog" tabindex="-1" id="modalInfo" class="modal fade graphiModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                    <h3 class="text-center">MindTabs</h3>
+                    <h4 class="modal-title">&nbsp;</h4>
+                    <h3 class="text-center">GraphiTabs performs<br />
+                        deep tabs management with ease
+                    </h3>
                 </div>
                 <div class="modal-body">
+
                     <div>
                         <img src="res/image/icon/graph.png" />
                         <p>
-                            MindTabs helps to see the current browser state with a simple graphically structured tree. This tree is truly live - every branch & item within it can be changed in realtime mode.
+                            GraphiTabs helps to see the current browser state with a simple graphically structured tree. This tree is trully live - every branch & item within it can be changed in realtime mode.
                         </p>
                         <div class="clearfix">&nbsp;</div>
                         <img src="res/image/icon/presentation.png" />
                         <p>
-                            MindTabs is a flexible tool able to solve different tasks. This tasks depend on what kind of user you are. Someone will like MindTabs for it's open/close feature. Another will reveal possibilities in suspending tabs + immediate reducing memory used by Chrome.
+                            GraphiTabs is a flexible tool able to solve different tasks. This tasks depend on what kind of user you are. Someone will like GraphiTabs for it's open/close feature. Another will reveal possibilities in suspending tabs + immediate reducing memory used by Chrome. 
                         </p>
-                        <p>But for every user MindTabs is a big picture with endless deeping & grouping. So find your personal use case & give us feedback.</p>
+                        <p>But for every user GraphiTabs is a big picture with endless deeping & grouping. So find your personal use case & give us feedback.</p>
                     </div>
                     <div>&nbsp;</div>
                     <p class="text-larger">Learn more about key features:</p>
@@ -279,7 +287,7 @@
                             <div class="panel-heading">
                                 <div class="panel-title">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseActions" title="Learn more about key actions" id="a4">
-                                        <p class="mdi mdi-check-all">Actions</p>
+                                        <p class="icon-checkmark">Actions</p>
                                     </a>
                                 </div>
                             </div>
@@ -288,45 +296,43 @@
                                     <table class="table table-striped table-responsive">
                                         <tr>
                                             <th>&nbsp;</th>
-                                            <th>ACTION</th>
-                                            <th>DESCRIPTION</th>
+                                            <th>Action</th>
+                                            <th>Description</th>
                                         </tr>
                                         <tr>
-                                            <td><span class="mdi mdi-window-maximize"></span></td>
+                                            <td><span class="icon-new-tab"></span></td>
                                             <td>Open</td>
                                             <td><small>double click node to open tab or right click node & select "Open".</small> </td>
                                         </tr>
                                         <tr>
-                                            <td><small class="mdi mdi-window-close"></small></td>
+                                            <td><small class="icon-cancel-2"></small></td>
                                             <td>Close</td>
-                                            <td>
-                                                <small>
-                                                    click to close tab / tab group / window or right click tab/tab group / window & select "Close". <br />
-                                                    <span class="badge bg-info">!</span>&nbsp;Select any item to perform this action.<br />
-                                                    <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> to open last closed tab.
-                                                </small>
-                                            </td>
+                                            <td><small>click to close tab / tab group / window or right click tab/tab group / window & select "Close". 
+                                                    <br />
+                                                <span class="badge bg-primary">!</span>&nbsp;Select any item to perform this action.
+                                                    <br />
+                                                <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>t</kbd> to open last closed tab.</small></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="mdi mdi-buffer"></span></td>
+                                            <td><span class="icon-download-2"></span></td>
                                             <td>Suspend</td>
-                                            <td><small>click to save tab / tab group / window or right click tab/tab group / window & select "Suspend".
+                                            <td><small>click to save tab / tab group / window or right click tab/tab group / window & select "Suspend". 
                                                     <br />
-                                                <span class="badge bg-info">!</span>&nbsp;Select any item to perform this action. </small></td>
+                                                <span class="badge bg-primary">!</span>&nbsp;Select any item to perform this action. </small></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="mdi mdi-restore"></span></td>
+                                            <td><span class="icon-upload-3"></span></td>
                                             <td>Restore</td>
-                                            <td><small>click to restore suspended tab / tab group / window or right click tab/tab group / window & select "Suspend".
+                                            <td><small>click to restore suspended tab / tab group / window or right click tab/tab group / window & select "Suspend". 
                                                     <br />
-                                                <span class="badge bg-info">!</span>&nbsp;Select any item to perform this action. </small></td>
+                                                <span class="badge bg-primary">!</span>&nbsp;Select any item to perform this action. </small></td>
                                         </tr>
                                         <tr>
-                                            <td><span class="mdi mdi-delete"></span></td>
+                                            <td><span class="icon-remove"></span></td>
                                             <td>Delete</td>
-                                            <td><small>click to delete suspended tab / tab group / window or right click tab/tab group / window & select "Suspend".
+                                            <td><small>click to delete suspended tab / tab group / window or right click tab/tab group / window & select "Suspend". 
                                                     <br />
-                                                <span class="badge bg-info">!</span>&nbsp;Select any item to perform this action. </small></td>
+                                                <span class="badge bg-primary">!</span>&nbsp;Select any item to perform this action. </small></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -336,7 +342,7 @@
                             <div class="panel-heading">
                                 <div class="panel-title">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSearch" title="Learn more about search" id="a5">
-                                        <p class="mdi mdi-magnify">Searching</p>
+                                        <p class="icon-search">Searching</p>
                                     </a>
                                 </div>
                             </div>
@@ -347,7 +353,7 @@
                                     <p>Currently searching by title or URL (even few letters) is available. Start typing any keyword from tab/tab group and get matching results.</p>
                                     <p>Hover any item to know the path for every tab/tab group.</p>
                                     <br />
-                                    <small><span class="badge bg-info">!</span>&nbsp;Don't forget to clear search box to show all tabs!</small>
+                                    <small><span class="badge bg-primary">!</span>&nbsp;Don't forget to clear search box to show all tabs!</small>
                                 </div>
                             </div>
                         </div>
@@ -355,7 +361,7 @@
                             <div class="panel-heading">
                                 <div class="panel-title">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTabs" title="Learn more about Tabs, groups & windows" id="a6">
-                                        <p class="mdi mdi-share-variant">Tabs, groups, windows</p>
+                                        <p class="icon-share-2">Tabs, groups, windows</p>
                                     </a>
                                 </div>
                             </div>
@@ -385,7 +391,7 @@
                             <div class="panel-heading">
                                 <div class="panel-title">
                                     <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseHotKeys" title="Learn more about hotkeys for quick access" id="a7">
-                                        <p class="mdi mdi-keyboard-variant">Hotkeys</p>
+                                        <p class="icon-keyboard">Hotkeys</p>
                                     </a>
                                 </div>
                             </div>
@@ -394,31 +400,31 @@
                                     <p>Use hotkeys for primary access to actions like mode toggling, zooming, moving & refresh.</p>
                                     <table class="table table-striped table-responsive table-centered">
                                         <tr>
-                                            <th>KEY</th>
-                                            <th>DESCRIPTION</th>
+                                            <th>Key</th>
+                                            <th>Description</th>
                                         </tr>
                                         <tr>
-                                            <td><kbd><small class="mdi mdi-arrow-up-bold"></small></kbd></td>
+                                            <td><kbd><small class="icon-arrow-up"></small></kbd></td>
                                             <td>Move tabs area up</td>
                                         </tr>
                                         <tr>
-                                            <td><kbd><small class="mdi mdi-arrow-right-bold"></small></kbd></td>
+                                            <td><kbd><small class="icon-arrow-right"></small></kbd></td>
                                             <td>Move tabs area right</td>
                                         </tr>
                                         <tr>
-                                            <td><kbd><small class="mdi mdi-arrow-down-bold"></small></kbd></td>
+                                            <td><kbd><small class="icon-arrow-down"></small></kbd></td>
                                             <td>Move tabs area down</td>
                                         </tr>
                                         <tr>
-                                            <td><kbd><small class="mdi mdi-arrow-left-bold"></small></kbd></td>
+                                            <td><kbd><small class="icon-arrow-left"></small></kbd></td>
                                             <td>Move tabs area down</td>
                                         </tr>
                                         <tr>
-                                            <td><kbd><small class="mdi mdi-plus-thick"></small></kbd></td>
+                                            <td><kbd><small class="icon-plus-2"></small></kbd></td>
                                             <td>Zoom in tabs area</td>
                                         </tr>
                                         <tr>
-                                            <td><kbd><small class="mdi mdi-minus-thick"></small></kbd></td>
+                                            <td><kbd><small class="icon-minus-2"></small></kbd></td>
                                             <td>Zoom out tabs area</td>
                                         </tr>
                                     </table>
@@ -427,27 +433,27 @@
                         </div>
 
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <div class="text-center">
-                        <a href="http://timedesk.org" target="_blank" class="text-purple">by Moenupa
-                        </a>
-                        <br />
-                        <small>BETA v0.1.1
-                        </small>
-                    </div>
+                    <div class="modal-footer">
+                        <div class="text-center">
+                            <a href="http://timedesk.org" target="_blank" class="text-purple">by Timedesk team    
+                            </a>
+                            <br />
+                            <small>Currently in beta version
+                            </small>
+                        </div>
 
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div aria-hidden="true" role="dialog" tabindex="-1" id="modalIntro" class="modal fade mindTabsModal">
+    <div aria-hidden="true" role="dialog" tabindex="-1" id="modalIntro" class="modal fade graphiModal">
         <div class="modal-dialog" style="max-width: 400px">
             <div class="modal-content">
                 <div class="modal-header">
                     <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
                     <h4 class="modal-title">&nbsp;</h4>
-                    <h3 class="text-center">Welcome to MindTabs!
+                    <h3 class="text-center">Welcome to GraphiTabs!
                     </h3>
                 </div>
                 <div class="modal-body">
@@ -463,10 +469,10 @@
                         <div>&nbsp;</div>
                         <p class="h5"><span class="h4"><b>2</b></span>&nbsp;Choose action for selected item(s).</p>
                         <div>&nbsp;</div>
-                        <p class="h5"><span class="h4"><b>3</b></span>&nbsp;Feel the true power of MindTabs!</p>
+                        <p class="h5"><span class="h4"><b>3</b></span>&nbsp;Feel the true power of GraphiTabs!</p>
                     </div>
                     <div class="text-center well-lg">
-                        <a class="btn btn-lg btn-primary btn-block" data-dismiss="modal">Start MindTabs</a>
+                        <a class="btn btn-lg btn-primary btn-block" data-dismiss="modal">Start GraphiTabs</a>
                     </div>
                     <div class="modal-footer">
                         <div class="text-center">

@@ -2,17 +2,16 @@
 "update_url": "https://clients2.google.com/service/update2/crx",
 
     "manifest_version": 2,
-	"name": "MindTabs",
+	"name": "GraphiTabs",
 	"version": "0.1.1", 
-	"description": "Mind map across your tabs. Smart way to organize your web.", 
+	"description": "Your tabs in order. Smart way to organize your web.", 
     "icons": {
-        "16": "/res/image/logo/MindTabs16.png",
-        "48": "/res/image/logo/MindTabs48.png",
-        "64": "/res/image/logo/MindTabs64.png",
-        "128": "/res/image/logo/MindTabs128.png"
+        "16": "/res/image/logo/16.png",
+        "48": "/res/image/logo/48.png",
+        "128": "/res/image/logo/128.png"
     },
 	"browser_action": {
-        "default_icon": "/res/image/logo/MindTabs64.png"
+        "default_icon": "/res/image/logo/19.png"
     }, 
 	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 	"background": {
