@@ -1,26 +1,30 @@
 # MindTabs
 
-A Chrome Extension for tab managing.
+A Chrome extension for tab managing.
+
+![MindTabs ScreenShot](./demo/MindTabs.png)
 
 ## COPYRIGHT
 
-NOTE: The `.js` files and large portion of `.css` and `.html` files are coded by [Timedesk team](http://www.timedesk.org) *(the link was deprecated, last checked on Jan 9th, 2020)*.
+The Original Extension is called [**GraphiTabs**](https://chrome.google.com/webstore/detail/graphitabs/dcfclemgmkccmnpgnldhldjmflphkimp), available via Chrome Web Store.
 
-And Since there is no contact therefore no permissions from the author, This repository is **NON-FORKABLE** and restricted to only personal uses.
+Since there is no way of any contact therefore no permissions from the author, this repository is **restricted** to **PERSONAL USES ONLY**. *Original author: [Timedesk team](http://www.timedesk.org) link deprecated before Jan 9th, 2021)*.
 
-The Original Extension is called [**GraphiTabs**](https://chrome.google.com/webstore/detail/graphitabs/dcfclemgmkccmnpgnldhldjmflphkimp) available via Chrome Web Store.
+MindTab's work is based on the GraphiTabs extension, and is currently not released to Chrome Web Store yet because of this issue.
 
-**Please consider to support the original author first.**
+**Please consider to support the ORIGINAL author via [GraphiTabs](https://chrome.google.com/webstore/detail/graphitabs/dcfclemgmkccmnpgnldhldjmflphkimp) FIRST,** *(and please try to establish contact if possible)*. Then if you are not satisfied with GraphiTabs, consider switching to MindTabs.
 
 ## Features
 
 The **MindTabs** Extension, compared to **GraphiTabs**, improves only on UI.
-- The icons are refreshed using [MaterialDesign-Webfont](https://github.com/Templarian/MaterialDesign-Webfont).
-- Dark Mode is now supported.
-- Font size and icon size are improved
+
+- **Icons** are refreshed using [MaterialDesign-Webfont](https://github.com/Templarian/MaterialDesign-Webfont).
+- *Removed dependency of font-awesome and iconFont*
+- **Dark theme** is now supported.
+- A light/dark **switch** to cover diverse needs
+- Font/icon size improved
+- Layout improved
 
 ## Issue and Pull Request
 
-Pull Request are welcomed, while issue is not quite so.
-
-Since I am not the original author, I do not have enough time to go over and improve the performance of JavaScript codes.
+Both are welcomed, especially pull request.
