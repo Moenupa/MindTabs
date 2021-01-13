@@ -965,12 +965,6 @@ ul.ft-link { margin: 0; padding: 0; }
         .weather-category ul li { border-right: 1px solid #E6E6E6; display: inline-block; text-align: center; width: 32%; }
             .weather-category ul li h5 { font-weight: 300; margin: 0 0 5px; text-transform: uppercase; }
             .weather-category ul li:last-child { border-right: medium none; }
-.fontawesome-icon-list h2 { font-size: 20px; font-weight: 300; margin-top: 0; }
-.fontawesome-icon-list .col-sm-4, .fontawesome-icon-list .col-md-3, .fontawesome-icon-list .col-xs-6 { margin-bottom: 10px; }
-.fontawesome-icon-list .page-header { border-bottom: 1px solid var(--border); }
-.fontawesome-icon-list a { color: #797979; }
-    .fontawesome-icon-list a:hover { color: #35404D; }
-.fontawesome-icon-list i { font-size: 16px; padding-right: 10px; }
 #web-application, #text-editor, #directional, #video-player, #brand, #medical, #currency { margin-top: 10px; }
 .mail-nav { margin: 15px -15px 0; }
     .mail-nav li a { border-radius: 0; border-right: 3px solid rgba(0, 0, 0, 0); border-top: 1px solid #F2F3F6; padding: 15px; }
