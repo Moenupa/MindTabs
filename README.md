@@ -4,7 +4,7 @@ A Chrome Extension for tab managing.
 
 ## COPYRIGHT
 
-NOTE: The `.js` files and large portion of `.css` and `.html` files are coded by [Timedesk team](www.timedesk.org) *(the link was deprecated, last checked on Jan 9th, 2020)*.
+NOTE: The `.js` files and large portion of `.css` and `.html` files are coded by [Timedesk team](http://www.timedesk.org) *(the link was deprecated, last checked on Jan 9th, 2020)*.
 
 And Since there is no contact therefore no permissions from the author, This repository is **NON-FORKABLE** and restricted to only personal uses.
 
