@@ -9,8 +9,6 @@
     <!--    <link rel="stylesheet" type="text/css" href="/app/lib/jquery-ui/css/ui-lightness/jquery-ui.css">-->
 
     <link rel="stylesheet" type="text/css" href="/res/css/jquery.contextMenu.css" />
-    <link rel="stylesheet" type="text/css" href="/res/css/TreeView.css">
-    <link rel="stylesheet" type="text/css" href="/res/css/ContextMenu.css">
     <link rel="stylesheet" type="text/css" href="/res/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/res/css/bootstrap-reset.css" />
     <link rel="stylesheet" type="text/css" href="/res/css/font-awesome.css" />
@@ -71,12 +69,17 @@
                         <input type="text" placeholder=" Search " class="form-control search searchControl mdi mdi-magnify" />
                     </li>
                     <li>
+                        <div id="themeSwitch" class="headerToggleCircle tooltips" data-placement="bottom" title="Switch Light/Dark Theme" data-container="body" data-toggle="modal">
+                            <div class="mdi mdi-24px mdi-theme-light-dark"></div>
+                        </div>
+                    </li>
+                    <li>
                         <div class="headerToggleCircle tooltips" data-placement="bottom" title="About MindTabs" data-container="body" data-toggle="modal" data-target="#modalInfo">
                             <div class="mdi mdi-24px mdi-information-variant"></div>
                         </div>
                     </li>
                     <li>
-                        <div id="factoryReset" class="headerToggleCircle tooltips" data-placement="bottom" title="Total Reset. Warning: All data erased " data-container="body">
+                        <div id="factoryReset" class="headerToggleCircle tooltips" data-placement="bottom" title="Total Reset. Warning: Erasing All Data" data-container="body">
                             <div class="mdi mdi-24px mdi-restore-alert"></div>
                         </div>
                     </li>
@@ -206,7 +209,7 @@
                                         </div>
                                     </div>
                                     <a class="left carousel-control text-primary h6" href="#tipsCarousel" data-slide="prev">Previous</a>
-                                    <a class="right carousel-control text-primary h6" href="#tipsCarousel" data-slide="next">Next tip</a>
+                                    <a class="right carousel-control text-primary h6" href="#tipsCarousel" data-slide="next">Next</a>
                                 </div>
                             </div>
                         </section>

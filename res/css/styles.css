@@ -1,7 +1,8 @@
 ﻿/* 
  * Use position to search for regional css
  * e.g. topright search for the elements located on the top-right
- * NOTE: dash here is omitted so to avoid css syntax collision
+ * positions available: "central", "topleft", "topright", "bottomleft", "bottomright", "midleft", "midright"
+ * NOTE: dash/space is omitted so to avoid css syntax collision
  * 
  * There are two backgrounds available: Dark and light
  * At this point it only supports Browser-Default theme
@@ -10,9 +11,7 @@
 
 @font-face{font-family:"Material Design Icons";src:url("../font/materialdesignicons-webfont.eot?v=5.8.55");src:url("../font/materialdesignicons-webfont.eot?#iefix&v=5.8.55") format("embedded-opentype"),url("../font/materialdesignicons-webfont.woff2?v=5.8.55") format("woff2"),url("../font/materialdesignicons-webfont.woff?v=5.8.55") format("woff"),url("../font/materialdesignicons-webfont.ttf?v=5.8.55") format("truetype");font-weight:normal;font-style:normal}
 
-@media (prefers-color-scheme: light) { 
-
-:root { /* light theme */
+[data-theme="light"] { /* light theme */
     --bg: #fff;
     --fg: #1E1E1E;
     --border: #ccc;
@@ -44,7 +43,6 @@
     --rgb-blue: 23,123,230;
     --rgb-purple: 162,92,196;
     --rgb-pink: 230,64,95;
-}
 }
 
 :root { /* dark theme */
@@ -83,8 +81,16 @@
 
 
 :root {
+    /* accent color, cyan by default */
     --accent: var(--cyan);
     --rgb-accent: var(--rgb-cyan);
+    /* symbols displayed by font, notice: !!!have dependency on "Material Design Icons" Font!!! */
+    --mdi-check: "\F012C";
+    --mdi-arrow-right : "\F0CE0";
+    --mdi-arrow-left : "\F0CDE";
+    --mdi-star-outline: "\F04D2";
+    --mdi-star: "\F04CE";
+    
 }
 
 html, body { height: 100%; border-color: var(--border); }
@@ -171,10 +177,10 @@ a, button { color: var(--light); background-color: transparent; }
     .tile:before { content: ""; display: block; padding-top: 57%; /* initial ratio of 1:1*/ }
 .tileContent { position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
 .tileSelectIcon { position: absolute; top: 0; right: 0; width: 36px; height: 36px; }
-    .tileSelectIcon:before { position: absolute; content: "\e08a"; color: var(--bg1); right: 4px; top: 4px; font-family: iconFont; z-index: 1002; opacity: 0.5; }
+    .tileSelectIcon:before { position: absolute; content: var(--mdi-check); color: var(--bg1); right: 4px; top: 4px; font-family: "Material Design Icons"; z-index: 1002; opacity: 0.5; }
     .tileSelectIcon:after { border-left: 36px solid transparent; border-top: 36px solid var(--black); content: ""; display: block; height: 0; position: absolute; right: 0px; top: 0px; width: 0; z-index: 1001; opacity: 0.2; }
 .tile:hover .tileSelectIcon:before, .tile:hover .tileSelectIcon:after { opacity: 1; border-top-color: var(--fg1); }
-.tile.selected .tileSelectIcon:before { position: absolute; content: "\e08a"; color: var(--bg1); right: 4px; top: 4px; font-family: iconFont; z-index: 1002; opacity: 1; }
+.tile.selected .tileSelectIcon:before { position: absolute; content: var(--mdi-check); color: var(--bg1); right: 4px; top: 4px; font-family: "Material Design Icons"; z-index: 1002; opacity: 1; }
 .tile.selected .tileSelectIcon:after { border-left: 36px solid transparent; border-top: 36px solid #007FFF; content: ""; display: block; height: 0; position: absolute; right: 0px; top: 0px; width: 0; z-index: 1001; opacity: 1; }
 /*fixed tiles height & tiles selected bug*/
 .tile span, .tile h4 { display: inline-block; margin: 0px; padding: 0 5px; height: 38px; word-wrap: break-word; font-size: 13px; font-weight: normal; /*background-color: rgba(51, 51, 51, 0.8);*/ }
@@ -248,7 +254,7 @@ a, button { color: var(--light); background-color: transparent; }
 .dateWrapper .linkItem.selected { box-shadow: 0 0 1px var(--bg1)fcc inset; font-size: 8px; }
     .dateWrapper .linkItem.selected h5 { color: var(--gray); }
     .dateWrapper .linkItem.selected img { -moz-opacity: 0.60; -khtml-opacity: 0.60; opacity: 0.60; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=60); }
-    .dateWrapper .linkItem.selected .linkItemInner:before { position: absolute; content: "\e08a"; color: var(--bg1); left: 4px; top: 2px; font-family: iconFont; z-index: 1002; }
+    .dateWrapper .linkItem.selected .linkItemInner:before { position: absolute; content: var(--mdi-check); color: var(--bg1); left: 4px; top: 2px; font-family: "Material Design Icons"; z-index: 1002; }
     .dateWrapper .linkItem.selected .linkItemInner:after { border-right: 25px solid transparent; border-top: 25px solid #007FFF; content: ""; display: block; height: 0; position: absolute; left: 0px; top: 0px; width: 0; z-index: 1001; }
 
 
@@ -433,7 +439,7 @@ form label.error { display: none !important; }
 
 .colorPreview { width: 36px; height: 36px; margin: 0px; margin-right: 5px; margin-bottom: 5px; float: left; position: relative; }
     .colorPreview.selected { outline: 2px solid #007FFF; box-shadow: 0 0 1px var(--bg1)fcc inset; font-size: 8px; }
-        .colorPreview.selected .colorPreviewInner:before { position: absolute; content: "\e08a"; color: var(--bg1); right: 4px; top: 2px; font-family: iconFont; z-index: 1002; }
+        .colorPreview.selected .colorPreviewInner:before { position: absolute; content: var(--mdi-check); color: var(--bg1); right: 4px; top: 2px; font-family: "Material Design Icons"; z-index: 1002; }
         .colorPreview.selected .colorPreviewInner:after { border-left: 25px solid transparent; border-top: 25px solid #007FFF; content: ""; display: block; height: 0; position: absolute; right: 0px; top: 0px; width: 0; z-index: 1001; }
 
 
@@ -510,10 +516,11 @@ p { margin: 0 0 10px; }
 .carousel img { height: 120px; }
 .carousel-caption { position: absolute; left: 0; right: 0; top: 0px; z-index: 10; padding-top: 0; padding-bottom: 0; color: var(--fg1); text-align: left; text-shadow: none; }
     .carousel-caption b { font-size: 12px; }
-.carousel-control.right, .carousel-control.left { background-image: none; text-shadow: none; color: var(--accent); font-size: 10px; top: auto; z-index: 11; opacity: 1; padding-top: 10px; }
-    .carousel-control.right:hover, .carousel-control.left:hover { text-decoration: underline; }
-        .carousel-control.right:hover:after { content: "\e1b3"; font-family: iconFont; position: absolute; right: -7px; bottom: -1px; }
-        .carousel-control.left:hover:before { content: "\e1b0"; font-family: iconFont; position: absolute; left: -7px; bottom: -1px; }
+.carousel-control.right, .carousel-control.left { background-image: none; text-shadow: none; color: var(--accent); font-size: 10px; top: 85%; z-index: 11; opacity: 1; padding-top: 10px; }
+    .carousel-control.right:after { color: var(--gray); content: var(--mdi-arrow-right); font-family: "Material Design Icons"; position: relative; margin-left: 2px; text-decoration: none; }
+    .carousel-control.left:before { color: var(--gray); content: var(--mdi-arrow-left); font-family: "Material Design Icons"; position: relative; margin-right: 2px; text-decoration: none; }
+    .carousel-control.left:hover, .carousel-control.right:hover { color: var(--purple); text-decoration: none; }
+        .carousel-control.left:hover:before, .carousel-control.right:hover:after { color: var(--purple); text-decoration: none; }
 
 
 .rightBottomWrapper { position: absolute; right: 0; bottom: 0; border-right: none; background-color: var(--bg1); border-top-left-radius: 3px; }
@@ -522,35 +529,66 @@ p { margin: 0 0 10px; }
 .iconWrapper:hover { color: var(--bg1); background-color: var(--accent); cursor: pointer; }
 
 
-.context-menu-item { padding: 7px; padding-left: 24px; background-color: #f7f7f7; }
-    .context-menu-item:hover { color: var(--bg1); background-color: var(--accent); }
-
-/* tree view showing tab relations: link(edge) and node*/
 svg { width: 100%; padding: 0; margin: 0; overflow: hidden; }
+/* central treeview showing tab relations: link(edge) and node */
+/* central link connects nodes */
 .link { fill: none; stroke: var(--line); stroke-width: 1px; }
     .link.suspended { stroke: rgba(var(--rgb-orange), 0.2); }
-    .link.active, .link.suspended.active { stroke-width: 2px; }
-    .link.active { stroke: rgba(var(--rgb-purple), 0.8); }
+    .link.active { stroke: rgba(var(--rgb-purple), 0.8); stroke-width: 2px; }
     .link.suspended.active { stroke: rgba(var(--rgb-red), 0.8); }
-
-.node text { fill: var(--fg); padding: 10px; font-size: 12px; text-decoration: none;}
-.node:hover text, .node.selected text { text-decoration: underline; }
-.node.selected text { fill: rgba(var(--rgb-purple), 1); }
-.node:active text { fill: var(--red); }
-
+.templink {
+    fill: none; stroke: var(--line); stroke-width: 0.5px;
+}
 .overlay { background-color: var(--bg); }
 
-.node:hover circle, .node.collapsed:hover circle { stroke: rgba(var(--rgb-purple), 0.8); }
-.node circle { stroke: rgba(var(--rgb-blue), 0.5); stroke-width: 2px; fill: var(--bg1); }
-.node.collapsed circle { stroke: rgba(var(--rgb-green), 0.8); fill: var(--bg2); }
+/* ======== central websites are nodes, text - website title, circle - website icon ======== */
+    .node
+    { cursor: pointer; }  
+        .node text 
+        { fill: var(--fg); padding: 10px; font-size: 14px; text-decoration: none; }
+            .node:hover text, .node.selected text 
+            { text-decoration: underline; }
+            .node.active text 
+            { fill: var(--red); }
+            .node.selected text 
+            { fill: var(--purple); }
 
-.node.suspended:hover circle, .node.suspended.collapsed:hover circle { stroke: rgba(var(--rgb-red), 0.8); }
-.node.suspended circle { stroke: rgba(var(--rgb-orange), 0.5); stroke-width:2px }
-.node.suspended.collapsed circle { stroke: rgba(var(--rgb-pink), 0.8); }
+        .node circle 
+        { stroke: rgba(var(--rgb-blue), 0.5); stroke-width: 2px; fill: var(--bg1); }
+            .node:hover circle, .node.collapsed:hover circle, .node.suspended:hover circle, .node.suspended.collapsed:hover circle 
+            { stroke: rgba(var(--rgb-purple), 0.8); }
+            .node.collapsed circle 
+            { stroke: rgba(var(--rgb-green), 0.8); fill: var(--bg2); }
+
+            .node.suspended circle 
+            { stroke: rgba(var(--rgb-orange), 0.5); stroke-width: 2px }
+                .node.suspended.collapsed circle 
+                { stroke: rgba(var(--rgb-pink), 0.8); }
+                .node.suspended:hover circle, .node.suspended.collapsed:hover circle 
+                { fill: var(--red);}
 
 
-.node.active circle { stroke: rgba(var(--rgb-red), 0.5); stroke-width: 2px; }
-.node.selected circle, .node.selected:hover circle { stroke: rgba(var(--rgb-purple), 1); stroke-width: 3px; fill: var(--bg); }
+            .node.active circle { stroke: rgba(var(--rgb-red), 0.5); stroke-width: 2px; }
+            .node.selected circle, .node.selected:hover circle { stroke: rgba(var(--rgb-purple), 1); stroke-width: 3px; fill: var(--bg); }
+        .node.faded
+        { opacity: 0.2; }
+        .node.selected image 
+        { href: "/res/image/svg/Selected.svg"; }
+
+    /* ghostcircle */
+    .ghostCircle.show 
+    { display:block; }
+    .ghostCircle, .activeDrag .ghostCircle
+    { display: none; }
+
+    /* central context menu  */
+    .contextMenu 
+    { z-index: 1000; }
+    .contextMenu.show 
+    { display:block; }
+    .context-menu-item { padding: 7px; padding-left: 24px; background-color: #f7f7f7; }
+        .context-menu-item:hover { color: var(--bg1); background-color: var(--accent); }
+/* ======== Central treeview part ends ======== */
 
 .navbar { margin-bottom: 0; }
     .navbar .navbar-right { padding-right: 0; }
@@ -560,7 +598,7 @@ svg { width: 100%; padding: 0; margin: 0; overflow: hidden; }
 .navbar-nav > li > a { background-color: var(--bg); padding: 16px 16px; }
 .navbar-default .navbar-nav > li > a:hover { color: var(--accent); }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { color: var(--bg1); background-color: var(--accent); }
-    .navbar-default .navbar-nav > .active > a:before { content: "\e08a"; font-family: iconFont; color: var(--bg1); margin-right: 5px; }
+    .navbar-default .navbar-nav > .active > a:before { content: var(--mdi-check); font-family: "Material Design Icons"; color: var(--bg1); margin-right: 5px; }
 .navbar-default .navbar-nav > .active:before { content: ""; position: absolute; bottom: -5px; width: 100%; height: 5px; background-color: #df502b; }
 
 .navbar-default .navbar-nav > .activeRefresh > a, .navbar-default .navbar-nav > .activeRefresh > a:hover { color: var(--accent); }
@@ -1202,7 +1240,7 @@ ul.amounts li { background: none repeat scroll 0 0 #F5F6F9; border-radius: 4px; 
 .carousel-control { color: var(--gray); text-shadow: none; width: 45px; }
     .carousel-control i { display: inline-block; height: 25px; left: 50%; margin-left: -10px; margin-top: -10px; position: absolute; top: 50%; width: 20px; z-index: 5; }
     .carousel-control.left, .carousel-control.right { background: none repeat scroll 0 0 rgba(0, 0, 0, 0); filter: none; margin-bottom: 0; }
-    .carousel-control:hover, .carousel-control:focus { color: var(--border); opacity: 0.9; text-decoration: none; }
+    .carousel-control:hover, .carousel-control:focus { color: var(--blue); opacity: 0.9; text-decoration: underline; }
 .carousel-inner h3 { font-size: 16px; font-weight: 300; margin: 0; }
 .carousel-inner { margin-bottom: 15px; }
 .gritter-close { left: auto !important; right: 3px !important; }
@@ -1378,8 +1416,8 @@ span.customSelect { background-color: var(--bg1); border: 1px solid #EAEAEA; bor
 .rating { direction: rtl; font-size: 30px; unicode-bidi: bidi-override; }
     .rating span.star, .rating span.star { display: inline-block; font-family: "Material Design Icons"; font-style: normal; font-weight: normal; }
         .rating span.star:hover, .rating span.star:hover { cursor: pointer; }
-        .rating span.star:before, .rating span.star:before { color: var(--gray); content: "\F04D2"; padding-right: 5px; }
-        .rating span.star:hover:before, .rating span.star:hover:before, .rating span.star:hover ~ span.star:before, .rating span.star:hover ~ span.star:before { color: var(--yellow); content: "\F04CE"; }
+        .rating span.star:before, .rating span.star:before { color: var(--gray); content: var(--mdi-star-outline); padding-right: 5px; }
+        .rating span.star:hover:before, .rating span.star:hover:before, .rating span.star:hover ~ span.star:before, .rating span.star:hover ~ span.star:before { color: var(--yellow); content: var(--mdi-star); }
 #editor-container { margin: 10px auto 0; width: 100%; }
 #header-editor { border-bottom: 1px solid #EAEAEA; overflow: hidden; padding: 0 0 30px; position: relative; }
 #headerLeft, #headerRight { overflow: hidden; width: 100%; }
@@ -1733,7 +1771,8 @@ ul.sidebar-menu li sup { vertical-align: top; position: relative; top: 0.2em; }
 .notify-row .dropdown-toggle:hover i:before, .notify-row .dropdown-toggle:focus i:before { color: var(--bg1); }
 .headerToggleCircle { background: none repeat scroll 0 0 var(--bg); border-radius: 50%; float: left; height: 36px; width: 36px; cursor: pointer; text-align: center; }
     .headerToggleCircle:hover { background: none repeat scroll 0 0 var(--accent); color: var(--bg1); }
-    .headerToggleCircle .mdi-restore-alert { padding: 1px 2px 0 0; }
+    .headerToggleCircle#factoryReset .mdi-restore-alert { padding: 1px 2px 0 0; }
+    .headerToggleCircle#themeSwitch .mdi-theme-light-dark { padding-top: 1.5px; }
 
 
 /* bottomleft tips */
