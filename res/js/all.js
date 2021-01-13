@@ -38746,6 +38746,7 @@ Toolbar = function (e) {
     function i() {
         t.p = e || {};
         t.elementName = e.elementName;
+        m();
         n()
     }
 
@@ -38760,6 +38761,16 @@ Toolbar = function (e) {
         $(".searchControl").keyup(_.debounce(function () {
             $act.fire("Search", $(this).val())
         }, 500))
+    }
+    
+    function m() {
+        $("#themeSwitch").click(function () {
+            if ($("html").attr("data-theme") == "dark") {
+                $("html").attr("data-theme","light");
+            } else {
+                $("html").attr("data-theme","dark");
+            }
+        });
     }
 
     function r() {
@@ -39891,3 +39902,5 @@ _gaq.push(["_trackPageview"]);
     var t = document.getElementsByTagName("script")[0];
     t.parentNode.insertBefore(e, t)
 })();
+
+$("html").attr("data-theme","dark");
