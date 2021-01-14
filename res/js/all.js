@@ -39036,18 +39036,6 @@ $(document).ready(function () {
             }
         });
         $(function () {
-            $(".event-list").slimscroll({
-                height: "305px",
-                wheelStep: 20
-            });
-            $(".conversation-list").slimscroll({
-                height: "360px",
-                wheelStep: 35
-            });
-            $(".to-do-list").slimscroll({
-                height: "300px",
-                wheelStep: 35
-            });
             $(".leftside-navigation").niceScroll({
                 cursorcolor: "#1FB5AD",
                 cursorborder: "0px solid #fff",

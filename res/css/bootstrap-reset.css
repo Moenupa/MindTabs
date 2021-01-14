@@ -1,7 +1,4 @@
 
-.panel { border: medium none; box-shadow: none; }
-.panel-group .panel + .panel { margin-top: 1px; }
-.panel-primary .tools a { color: #FFFFFF; }
 .label { padding: 0.5em 0.8em; }
 
 .modal-content { border: medium none; box-shadow: none; }

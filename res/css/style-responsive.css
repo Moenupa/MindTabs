@@ -1,7 +1,5 @@
 ﻿@media (min-width: 768px) and (max-width: 980px) {
     /*-*/
-    .prd-row .action { right: 25px; }
-
     .hr-menu .brand { width: 100%; }
 
     .hr-menu .horizontal-menu { margin: 10px 0; }
@@ -26,9 +24,6 @@
     /*calendar*/
     .fc-button-inner { padding: 0; }
     /*-*/
-    .prd-row .action { right: 25px; }
-
-    .weather-full-info ul li { width: 15.8%; }
 
     .today-status { margin-bottom: 10px; }
 
@@ -37,13 +32,7 @@
     .hr-top-nav { display: inline-block; float: right; margin: 10px 0; }
 
     .horizontal-menu { width: 100%; }
-
         .horizontal-menu .navbar-nav > li { margin-bottom: 10px; }
-    .lock-wrapper { padding: 0 20px; }
-
-        .lock-wrapper img { width: 140px; height: 140px; margin-top: 10px; }
-
-    .lock-pwd input { width: 70%; }
 
     #time { font-size: 100px; }
 }
@@ -54,10 +43,6 @@
     .hide-left-bar ul.sidebar-menu li a span, .hide-left-bar ul.sidebar-menu li a sup { display: none }
     ul.sidebar-menu { padding-top: 0px; }
     /*-*/
-    .prd-row .action { right: 25px; }
-    .lock-wrapper { padding: 0 20px; }
-        .lock-wrapper img { width: 140px; height: 140px; margin-top: 10px; }
-    .lock-pwd input { width: 70%; }
 
     #time { font-size: 100px; }
 }
@@ -83,9 +68,6 @@
     .fc-state-default, .fc-state-default .fc-button-inner { background: none repeat scroll 0 0 #FFFFFF !important; }
 
     /*-*/
-    .prd-row .action { right: 25px; }
-
-    .weather-full-info ul li { width: 30%; margin-bottom: 10px; }
 
     .today-status { margin-bottom: 10px; }
 
@@ -93,15 +75,7 @@
 
     .hr-top-nav { display: inline-block; float: right; margin: 10px 0; }
     .horizontal-menu { width: 100%; }
-
         .horizontal-menu .navbar-nav > li { margin-bottom: 10px; }
 
-    .lock-wrapper { padding: 0 20px; }
-        .lock-wrapper img { width: 100px; height: 100px; margin-top: -25px; }
-
-    .lock-pwd input { width: 70%; }
-
     #time { font-size: 50px; }
-
-    .lock-pwd { padding: 0; }
 }
