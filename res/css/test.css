@@ -17,6 +17,7 @@
     html, body, .ui-widget, .node text { font-family: sans-serif; font-size: 14px; }
     body { background: none repeat scroll 0 0 var(--bg); margin: 0 !important; padding: 0 !important; }
     code { background-color: rgba(var(--rgb-fg), 0.1); color: var(--fg); }
+    p { margin: 0 0 10px; }
 
 /* ==================== global: icon style */
     .mdi::before { font-size: auto; }
