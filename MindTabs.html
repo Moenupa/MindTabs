@@ -8,11 +8,12 @@
 	<!--Libraries-->
 	<link rel="stylesheet" type="text/css" href="/res/css/pigeon.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/jquery.contextMenu.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/bootstrapv3.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/bootstrap-reset.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/materialdesignicons.min.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/styles.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/style-responsive.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/styles.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/test.css" />
 
 	<script src="/res/js/all.min.js"></script>
 	<script src="/res/js/jquery.contextMenu.min.js"></script>
@@ -30,30 +31,18 @@
 				<ul class="nav top-menu">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle tooltips" data-placement="bottom" title="Windows opened">
-							<!-- <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 48 48">
-								<path fill="none" d="M0 0h48v48h-48z" />
-								<path class="top-status-svg" id="window-outline" d="M38 24h-4v6h-6v4h10v-10zm-24-6h6v-4h-10v10h4v-6zm28-12h-36c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h36c2.21 0 4-1.79 4-4v-28c0-2.21-1.79-4-4-4zm0 32.03h-36v-28.06h36v28.06z" />
-							</svg> -->
 							<i class="mdi mdi-aspect-ratio"></i>
 							<span class="badge bg-success"></span>
 						</a>
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle tooltips" data-placement="bottom" title="Tabs opened">
-							<!-- <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
-								<path fill="none" d="M0 0h24v24H0V0zm0 0h24v24H0V0z" />
-								<path class="top-status-svg" id="tab-outline" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h10v4h8v10z" />
-							</svg> -->
 							<i class="mdi mdi-tab"></i>
 							<span class="badge bg-info"></span>
 						</a>
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle tooltips" data-placement="bottom" title="Tabs suspended">
-							<!-- <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24">
-								<path fill="none" d="M0 0h24v24H0V0z" />
-								<path class="top-status-svg" id="suspend-outline" d="M1 9h2V7H1v2zm0 4h2v-2H1v2zm0-8h2V3c-1.1 0-2 .9-2 2zm8 16h2v-2H9v2zm-8-4h2v-2H1v2zm2 4v-2H1c0 1.1.9 2 2 2zM21 3h-8v5c0 .55.45 1 1 1h9V5c0-1.1-.9-2-2-2zm0 14h2v-2h-2v2zM9 5h2V3H9v2zM5 21h2v-2H5v2zM5 5h2V3H5v2zm16 16c1.1 0 2-.9 2-2h-2v2zm0-8h2v-2h-2v2zm-8 8h2v-2h-2v2zm4 0h2v-2h-2v2z" />
-							</svg> -->
 							<i class="mdi mdi-tab-unselected"></i>
 							<span class="badge bg-warning"></span>
 						</a>
@@ -120,7 +109,7 @@
 						</li>
 					</ul>
 					<div class="aboutWrapper text-center">
-						<a href="http://github.com/Moenupa" class="text-purple">by Moenupa</a>
+						<a href="http://github.com/Moenupa" class="fg-purple">by Moenupa</a>
 						<br />
 						<small>BETA v0.1.1
 						</small>
@@ -141,12 +130,13 @@
 				<div class="row">
 					<div id="tree-container" class="treeWrapper">
 						<section class="toolTipWrapper panel" style="margin-bottom: 0; display: none;">
-							<header class="toolTipInnerName panel-heading mdi mdi-information-outline">
-								Tips
-									<span class="tools pull-right">
-										<a href="#" class="mdi mdi-arrow-expand-up tooltips panel-toggler" data-placement="top" title="SHOW / HIDE"></a>
-										<a href="#" class="mdi mdi-bell-off-outline tooltips panel-toggler" data-placement="top" title="DISABLE"></a>
-									</span>
+							<header class="toolTipInnerName panel-heading">
+								<span class="mdi mdi-information-variant" ></span>
+								<span>Tips</span>
+								<span class="tools pull-right">
+									<a href="#" class="mdi mdi-arrow-expand-up tooltips panel-toggler" data-placement="top" title="SHOW / HIDE"></a>
+									<a href="#" class="mdi mdi-bell-off-outline tooltips panel-toggler" data-placement="top" title="DISABLE"></a>
+								</span>
 							</header>
 							<div class="toolTipInner panel-body" style="display: none;">
 								<div id="tipsCarousel" class="carousel slide">
@@ -166,11 +156,8 @@
 											<div class="container">
 												<div class="carousel-caption">
 													<p><b>2. Actions</b></p>
-													<p>
-														<small>Select any item(s) to perform actions (become active in top toolbar). This mode allows to perform actions for multiple items.
-																<br />
-															Try right click to perform action for single item from context menu.</small>
-													</p>
+													<p><small>Select any item(s) to perform actions (activated in left toolbar). This mode allows actions for multiple items.</small></p>
+													<p><small>Right click to perform action for single item from context menu.</small></p>
 												</div>
 											</div>
 										</div>
@@ -180,7 +167,7 @@
 												<div class="carousel-caption">
 													<p><b>3. Manage view</b></p>
 													<p><small>Click empty spave & drag it to any suitable position (or use arrow keys from keyboard).</small></p>
-													<p><small>Try zooming feature to get big picture of your data (or use +/- keys from keyboard).</small></p>
+													<p><small>Try zooming feature to get big picture of your data (or use <kbd>+</kbd> or <kbd>-</kbd> keys from keyboard).</small></p>
 												</div>
 											</div>
 										</div>
@@ -200,7 +187,7 @@
 												<div class="carousel-caption">
 													<p><b>5. Filter data</b></p>
 													<p><small>Use search to filter your data and get matching results. Only a few clicks to find the desired node!</small></p>
-													<p><small>Filtering by node name and URL is supported currently.</small></p>
+													<p><small>Filtering by both website name and URL is supported. (e.g. accepts either of <code>Google</code> and <code>www.google.com</code>)</small></p>
 												</div>
 											</div>
 										</div>
@@ -294,39 +281,39 @@
 										<tr>
 											<td><span class="mdi mdi-window-maximize"></span></td>
 											<td>Open</td>
-											<td><small>double click node to open tab or right click node & select "Open".</small> </td>
+											<td><small>double click node to open tab or right click node & select "Open". <br /><span class="badge bg-info">!</span>&nbsp;Select active tabs to perform this action. </small> </td>
 										</tr>
 										<tr>
 											<td><small class="mdi mdi-window-close"></small></td>
 											<td>Close</td>
 											<td>
-												<small>
-													click to close tab / tab group / window or right click tab/tab group / window & select "Close". <br />
-													<span class="badge bg-info">!</span>&nbsp;Select any item to perform this action.<br />
-													<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> to open last closed tab.
-												</small>
+												<small>click to close tab / tab group / window or right click tab/tab group / window & select "Close". <br />
+												<span class="badge bg-info">!</span>&nbsp;Select active tabs to perform this action.<br /><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>T</kbd> to open last closed tab. </small>
 											</td>
 										</tr>
 										<tr>
 											<td><span class="mdi mdi-buffer"></span></td>
 											<td>Suspend</td>
-											<td><small>click to save tab / tab group / window or right click tab/tab group / window & select "Suspend".
-													<br />
-												<span class="badge bg-info">!</span>&nbsp;Select any item to perform this action. </small></td>
+											<td>
+												<small>click to save tab / tab group / window or right click tab/tab group / window & select "Suspend".<br />
+												<span class="badge bg-info">!</span>&nbsp;Select active tabs to perform this action. </small>
+											</td>
 										</tr>
 										<tr>
 											<td><span class="mdi mdi-restore"></span></td>
 											<td>Restore</td>
-											<td><small>click to restore suspended tab / tab group / window or right click tab/tab group / window & select "Suspend".
-													<br />
-												<span class="badge bg-info">!</span>&nbsp;Select any item to perform this action. </small></td>
+											<td>
+												<small>click to restore suspended tab / tab group / window or right click tab/tab group / window & select "Suspend".<br />
+												<span class="badge bg-info">!</span>&nbsp;Select suspended tabs to perform this action. </small>
+											</td>
 										</tr>
 										<tr>
 											<td><span class="mdi mdi-delete"></span></td>
 											<td>Delete</td>
-											<td><small>click to delete suspended tab / tab group / window or right click tab/tab group / window & select "Suspend".
-													<br />
-												<span class="badge bg-info">!</span>&nbsp;Select any item to perform this action. </small></td>
+											<td>
+												<small>click to delete suspended tab / tab group / window or right click tab/tab group / window & select "Suspend".<br />
+												<span class="badge bg-info">!</span>&nbsp;Select suspended tabs to perform this action. </small>
+											</td>
 										</tr>
 									</table>
 								</div>
@@ -344,7 +331,7 @@
 								<div class="panel-body">
 									<p><b>Search allows to filter all tabs and access any tab faster!</b></p>
 									<br />
-									<p>Currently searching by title or URL (even few letters) is available. Start typing any keyword from tab/tab group and get matching results.</p>
+									<p>Search by title or URL (even few letters) to find tabs. Start typing any keyword from tab/tab group and get matching results.</p>
 									<p>Hover any item to know the path for every tab/tab group.</p>
 									<br />
 									<small><span class="badge bg-info">!</span>&nbsp;Don't forget to clear search box to show all tabs!</small>
@@ -398,27 +385,27 @@
 											<th>DESCRIPTION</th>
 										</tr>
 										<tr>
-											<td><kbd><small class="mdi mdi-arrow-up-bold"></small></kbd></td>
+											<td><kbd><span class="mdi mdi-arrow-up-bold"></span></kbd></td>
 											<td>Move tabs area up</td>
 										</tr>
 										<tr>
-											<td><kbd><small class="mdi mdi-arrow-right-bold"></small></kbd></td>
+											<td><kbd><span class="mdi mdi-arrow-right-bold"></span></kbd></td>
 											<td>Move tabs area right</td>
 										</tr>
 										<tr>
-											<td><kbd><small class="mdi mdi-arrow-down-bold"></small></kbd></td>
+											<td><kbd><span class="mdi mdi-arrow-down-bold"></span></kbd></td>
 											<td>Move tabs area down</td>
 										</tr>
 										<tr>
-											<td><kbd><small class="mdi mdi-arrow-left-bold"></small></kbd></td>
+											<td><kbd><span class="mdi mdi-arrow-left-bold"></span></kbd></td>
 											<td>Move tabs area down</td>
 										</tr>
 										<tr>
-											<td><kbd><small class="mdi mdi-plus-thick"></small></kbd></td>
+											<td><kbd><span class="mdi mdi-plus-thick"></span></kbd></td>
 											<td>Zoom in tabs area</td>
 										</tr>
 										<tr>
-											<td><kbd><small class="mdi mdi-minus-thick"></small></kbd></td>
+											<td><kbd><span class="mdi mdi-minus-thick"></span></kbd></td>
 											<td>Zoom out tabs area</td>
 										</tr>
 									</table>
@@ -430,7 +417,7 @@
 				</div>
 				<div class="modal-footer">
 					<div class="text-center">
-						<a href="http://timedesk.org" target="_blank" class="text-purple">by Moenupa
+						<a href="http://timedesk.org" target="_blank" class="fg-purple">by Moenupa
 						</a>
 						<br />
 						<small>BETA v0.1.1
@@ -470,7 +457,7 @@
 					</div>
 					<div class="modal-footer">
 						<div class="text-center">
-							<a href="http://timedesk.org" target="_blank" class="text-purple">by Timedesk team
+							<a href="http://timedesk.org" target="_blank" class="fg-purple">by Timedesk team
 							</a>
 							<br />
 							<small>Currently in beta version

@@ -1,6 +1,4 @@
 
-a { color: #32323A; }
-    a:hover { color: #222227; }
 .panel { border: medium none; box-shadow: none; }
 .panel-group .panel + .panel { margin-top: 1px; }
 .panel-primary .tools a { color: #FFFFFF; }
@@ -34,22 +32,13 @@ ul { padding-left: 0; }
 .breadcrumb { background-color: #FFFFFF; }
 .nav-tabs > li > a { margin-right: 1px; }
 .panel-default > .panel-heading { background-color: #FFFFFF; border-color: #DDDDDD; color: #797979; }
-.navbar-inverse { background-color: #32323A; border-color: #32323A; }
-    .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus { background-color: #474752; }
-    .navbar-inverse .navbar-nav > li a:hover { color: #FFFFFF; }
-    .navbar-inverse .navbar-nav > li > ul > li a:hover { color: #FFFFFF; }
-    .navbar-inverse .navbar-brand { color: #FFFFFF; }
-    .navbar-inverse .navbar-nav > li > a { color: #FFFFFF; }
-    .navbar-inverse .navbar-nav > .dropdown > a .caret { border-bottom-color: #FFFFFF; border-top-color: #FFFFFF; }
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a { color: #000000; }
-        .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover { color: #FFFFFF; }
 .nav-justified { width: auto !important; }
     .nav-justified li:last-child > a:hover, .nav-justified li.active:last-child > a { border-radius: 0 4px 0 0 !important; }
 .list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus { background-color: #00A8B3; border-color: #00A8B3; color: #FFFFFF; z-index: 2; }
 .list-group-item-heading { font-weight: 300; }
 .progress { background: none repeat scroll 0 0 #F0F2F7; box-shadow: none; }
 .alert-success, .alert-danger, .alert-info, .alert-warning { border: medium none; }
-.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td { padding: 10px; }
+
 .pagination > li > a, .pagination > li > span { background-color: #EFF2F7; border: 1px solid #EFF2F7; float: left; line-height: 1.42857; margin-left: 1px; padding: 6px 12px; position: relative; text-decoration: none; }
     .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus { background-color: #2EB4AD; color: #FFFFFF; }
 .has-success .form-control:focus, .has-error .form-control:focus, .has-warning .form-control:focus { box-shadow: none; }

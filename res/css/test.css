@@ -1,0 +1,86 @@
+/**
+ * Use position to search for regional css
+ * e.g. topright search for the elements located on the top-right
+ * positions available: 
+ * "central", "topleft", "topright", "bottomleft", "bottomright", "midleft", "midright"
+ * NOTE: dash/space is omitted so to avoid css syntax collision
+ * 
+ */
+/* ==================== global: base style */
+    html, body { text-rendering: optimizeLegibility; height: 100%; border-color: var(--border); }
+    html, body, .ui-widget, .node text, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: sans-serif; color: var(--fg); }
+    html, body, .ui-widget, .node text { font-family: sans-serif; font-size: 14px; }
+    body { background: none repeat scroll 0 0 var(--bg); margin: 0 !important; padding: 0 !important; }
+    code { background-color: rgba(var(--rgb-fg), 0.1); color: var(--fg); }
+
+/* ==================== global: icon style */
+    .mdi::before { font-size: auto; }
+
+/* ==================== global: hide scroll bar */
+    ::-webkit-scrollbar { display:none }
+
+/* ==================== global: key binding layout */
+    kbd { color: var(--fg); border: 1px solid var(--border); box-shadow: 1px 1px var(--border); background-color: var(--bg0); }
+    kbd .mdi::before { font-size: 14px; }
+
+/* ==================== global: table layout */
+    th { text-align: center; }
+    .table
+    { background-color: rgba(var(--rgb-fg), 0.02); border: none; }
+        .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td
+        { border-top-width: 1px; border: none; padding: 10px; }
+        .table>thead>tr>th
+        { border-bottom-width: 2px; border: none; }
+        .table>tbody+tbody
+        { border-top-width: 2px; border: none; }
+    .table-centered { text-align: center; border: none; }
+    .table-striped>tbody>tr:nth-child(odd)>td
+    { background-color: rgba(var(--rgb-fg), 0.02) }
+    .table-striped>tbody>tr:nth-child(odd)>th
+    { background-color: rgba(var(--rgb-fg), 0.04) }
+
+/* ==================== global: badge - primary/success/warning/important */
+    .badge { color: var(--bg); padding: 1px 5px;}
+        .badge.bg-primary { background: none repeat scroll 0 0 var(--accent); }
+        .badge.bg-success { background: none repeat scroll 0 0 var(--green); }
+        .badge.bg-warning { background: none repeat scroll 0 0 var(--orange); }
+        .badge.bg-important { background: none repeat scroll 0 0 var(--red); }
+        .badge.bg-info { background: none repeat scroll 0 0 var(--blue); }
+        .badge.bg-inverse { background: none repeat scroll 0 0 var(--purple); }
+
+/* ==================== topright: buttons - theme/info/reset */
+    .headerToggleCircle { background: none repeat scroll 0 0 var(--bg); border-radius: 50%; float: left; height: 36px; width: 36px; cursor: pointer; text-align: center; }
+    .headerToggleCircle:hover { background: none repeat scroll 0 0 var(--accent); color: var(--bg1); }
+        .headerToggleCircle#factoryReset .mdi-restore-alert { padding: 1px 2px 0 0; }
+        .headerToggleCircle#themeSwitch .mdi-theme-light-dark { padding-top: 1.5px; }
+
+/* ==================== global: panel */
+    .panel-group .panel-heading+.panel-collapse .panel-body { border-top: 1px solid var(--border); }
+    .panel {background-color: transparent; border: none;}
+        .panel .panel-heading { background-color: rgba(var(--rgb-accent), 0.5); color: var(--fg); border-bottom: var(--border); padding: 15px; text-transform: uppercase; }
+            .panel .panel-heading span { color: var(--fg); }
+            .panel .panel-heading .mdi::before { font-size: 16px; padding: 0; margin: 0; }
+            .panel .panel-heading .penal-title { margin: 0; }
+            .panel .panel-heading .panel-title .mdi::before { font-size: 16px; margin-right: 4px; }
+        .panel .panel-body { background-color: rgba(var(--bg), 0.5); border-top: 1px solid var(--border); border-top: none; }
+        .panel-collapse { background-color: var(--bg0); }
+        .panel .panel-footer { background-color: rgba(var(--rgb-accent), 0.2); }
+
+/* ==================== topleft: statistics bar numOf windows/tabs/suspended */
+    ul.top-menu { margin-right: 15px; margin-top: 0; }
+        ul.top-menu > li > a { background: none repeat scroll 0 0 var(--bg); border-radius: 50%; color: var(--fg2); font-size: 20px; margin-right: 16px; height: 36px; width: 36px; padding: 4px; text-align: center; }
+            ul.top-menu > li > a > i { color: var(--fg1); font-size: 20px; margin-bottom: 10px;}
+            ul.top-menu > li > a:hover, ul.top-menu > li > a:focus { background: none repeat scroll 0 0 var(--bg2); color: rgba(0, 0, 0, 0.3) !important; cursor: default; }
+
+/* ==================== topmid: top statistics bar and settings: numOf windows/tabs/suspended */
+.notify-row { float: left; margin-left: 25px; margin-top: 20px; }
+    .notify-row .badge { position: absolute; right: -7px; top: -7px; z-index: 100; padding: 2px 6px; font-family: monospace; }
+    .notify-row i:before { margin: 0; line-height: 1; }
+    .notify-row .dropdown-toggle:hover i:before, .notify-row .dropdown-toggle:focus i:before { color: var(--blue); }
+
+/* ==================== topright: search box */
+.search { background: url("/res/image/svg/Search.svg") no-repeat scroll 10px 8px var(--bg); background-size: 20px; border: 1px solid var(--bg1); border-radius: 100px; box-shadow: none; color: var(--fg2); padding: 0 5px 0 30px; transition: all 0.3s ease 0s; width: 160px; height: 36px;}
+    .search:focus { border: 1px solid var(--accent); box-shadow: none; color: var(--gray); font-weight: 300; transition: all 0.3s ease 0s; width: 360px; }
+.todo-search:focus { width: 100% !important; }
+.todo-search-wrap { padding: 0; }
+.todo-search { border-radius: 3px !important; }
