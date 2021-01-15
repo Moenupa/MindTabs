@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
 	<title>MindTabs</title>
 	<link href="/res/image/logo/MindTabs.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -15,8 +15,8 @@
 	<link rel="stylesheet" type="text/css" href="/res/css/bootstrap-reset.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/materialdesignicons.min.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/styles.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/test.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/style-responsive.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/test.css" />
 
 	<script src="/res/js/jquery.min.js"></script>
 	<script src="/res/js/jquery-ui.min.js"></script>
@@ -57,7 +57,7 @@
 			<div class="top-nav clearfix">
 				<ul class="nav pull-right top-menu">
 					<li>
-						<input type="text" placeholder=" Search " class="form-control search searchControl mdi mdi-magnify" />
+						<input type="text" placeholder="Search URL" class="form-control search searchControl mdi mdi-magnify" />
 					</li>
 					<li>
 						<div id="themeSwitch" class="headerToggleCircle tooltips" data-placement="bottom" title="Switch Light/Dark Theme" data-container="body" >
@@ -135,7 +135,7 @@
 						<section class="toolTipWrapper panel" style="margin-bottom: 0; display: none;">
 							<header class="toolTipInnerName panel-heading">
 								<span class="mdi mdi-information-variant" ></span>
-								<span>Tips</span>
+								<span class="panel-title">Tips</span>
 								<span class="tools pull-right">
 									<a href="#" class="mdi mdi-arrow-expand-up tooltips panel-toggler" data-placement="top" title="SHOW / HIDE"></a>
 									<a href="#" class="mdi mdi-bell-off-outline tooltips panel-toggler" data-placement="top" title="DISABLE"></a>
@@ -246,7 +246,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+					<button aria-hidden="true" data-dismiss="modal" class="mdi mdi-close pull-right" type="button"></button>
 					<h3 class="text-center">MindTabs</h3>
 				</div>
 				<div class="modal-body">
@@ -255,16 +255,14 @@
 						<p>
 							MindTabs helps to see the current browser state with a simple graphically structured tree. This tree is truly live - every branch & item within it can be changed in realtime mode.
 						</p>
-						<div class="clearfix">&nbsp;</div>
 						<img src="res/image/icon/presentation.png" />
 						<p>
 							MindTabs is a flexible tool able to solve different tasks. This tasks depend on what kind of user you are. Someone will like MindTabs for it's open/close feature. Another will reveal possibilities in suspending tabs + immediate reducing memory used by Chrome.
 						</p>
 						<p>But for every user MindTabs is a big picture with endless deeping & grouping. So find your personal use case & give us feedback.</p>
 					</div>
-					<div>&nbsp;</div>
 					<p class="text-larger">Learn more about key features:</p>
-					<div class="panel-group m-bot20" id="accordion">
+					<div class="panel-group" id="accordion">
 						<div class="panel">
 							<div class="panel-heading">
 								<div class="panel-title">
@@ -415,57 +413,14 @@
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 				<div class="modal-footer">
 					<div class="text-center">
-						<a href="http://timedesk.org" target="_blank" class="fg-purple">by Moenupa
-						</a>
+						<a href="https://github.com/Moenupa" target="_blank" class="fg-purple">by Moenupa</a>
 						<br />
 						<small>BETA v0.1.1
 						</small>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-	<div aria-hidden="true" role="dialog" tabindex="-1" id="modalIntro" class="modal fade mindTabsModal">
-		<div class="modal-dialog" style="max-width: 400px">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button aria-hidden="true" data-dismiss="modal" class="close mdi mdi-close pull-right" type="button"></button>
-					<h4 class="modal-title">&nbsp;</h4>
-					<h3 class="text-center">Welcome to MindTabs!
-					</h3>
-				</div>
-				<div class="modal-body">
-					<div class="text-center">
-						<img src="res/image/icon/diamond.png" style="float: none" />
-						<h4>Please read this tips before you start<br />
-							& become a PRO just in a minute!</h4>
-					</div>
-					<div class="clearfix"></div>
-					<h4>&nbsp;</h4>
-					<div class="text-center">
-						<p class="h5"><span class="h4"><b>1</b></span>&nbsp;Select any item to perform action.&nbsp;</p>
-						<div>&nbsp;</div>
-						<p class="h5"><span class="h4"><b>2</b></span>&nbsp;Choose action for selected item(s).</p>
-						<div>&nbsp;</div>
-						<p class="h5"><span class="h4"><b>3</b></span>&nbsp;Feel the true power of MindTabs!</p>
-					</div>
-					<div class="text-center well-lg">
-						<a class="btn btn-lg btn-primary btn-block" data-dismiss="modal">Start MindTabs</a>
-					</div>
-					<div class="modal-footer">
-						<div class="text-center">
-							<a href="http://timedesk.org" target="_blank" class="fg-purple">by Timedesk team
-							</a>
-							<br />
-							<small>Currently in beta version
-							</small>
-						</div>
 					</div>
 				</div>
 			</div>
