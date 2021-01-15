@@ -1,9 +1,6 @@
 
 .label { padding: 0.5em 0.8em; }
 
-.modal-content { border: medium none; box-shadow: none; }
-.modal-header { border-radius: 5px 5px 0 0; }
-    .modal-header .close { margin-top: 0; }
 .form-control { border: 1px solid #E2E2E4; box-shadow: none; color: #C2C2C2; }
     .form-control:focus, #focusedInput { border: 1px solid #00A8B3; box-shadow: none; }
 .form-horizontal .control-label { font-size: 14px; font-weight: 300; }

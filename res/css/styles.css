@@ -164,9 +164,7 @@ a, button { color: var(--blue); background-color: transparent; }
         { color: var(--purple); }
 /* bottomleft tips ends */
 
-.rightBottomWrapper { position: absolute; right: 0; bottom: 0; border-right: none; background-color: var(--bg1); border-top-left-radius: 3px; padding: 5px; }
-.rightBottomWrapper, .toolTipWrapper { box-shadow: 1px 0 3px rgba(0, 0, 0, 0.15); }
-    .rightBottomWrapper td { text-align: center; vertical-align: middle; color: #AAA; font-size: 21px; width: 21px; height: 21px; line-height: 1.1; }
+
 .iconWrapper:hover { color: var(--bg1); background-color: var(--accent); cursor: pointer; }
 
 svg { width: 100%; padding: 0; margin: 0; overflow: hidden; }

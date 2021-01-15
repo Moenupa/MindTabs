@@ -14,7 +14,7 @@
 /* ==================== global: base style */
     html, body { text-rendering: optimizeLegibility; height: 100%; border-color: var(--border); }
     html, body, .ui-widget, .node text, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: sans-serif; color: var(--fg); }
-    html, body, .ui-widget, .node text { font-family: sans-serif; font-size: 14px; }
+    html, body, .ui-widget, .node text { font-size: 14px; }
     body { background: none repeat scroll 0 0 var(--bg); margin: 0 !important; padding: 0 !important; }
     code { background-color: rgba(var(--rgb-fg), 0.1); color: var(--fg); }
     p { margin: 0 0 10px; }
@@ -32,7 +32,7 @@
 
 /* ==================== global: table layout */
     .table
-    { background-color: rgba(var(--rgb-fg), 0.02); border: none; }
+    { background-color: rgba(var(--rgb-bg2), 0.2); border: none; }
         .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td
         { border-top-width: 1px; border: none; padding: 10px; }
         .table>thead>tr>th
@@ -42,9 +42,9 @@
     .table-centered { text-align: center; border: none; }
         .table-centered td, .table-centered th { text-align: inherit; }
     .table-striped>tbody>tr:nth-child(odd)>td
-    { background-color: rgba(var(--rgb-fg), 0.02) }
+    { background-color: rgba(var(--rgb-bg2), 0.2); }
     .table-striped>tbody>tr:nth-child(odd)>th
-    { background-color: rgba(var(--rgb-fg), 0.04) }
+    { background-color: rgba(var(--rgb-bg2), 0.4); }
 
 /* ==================== global: badge - primary/success/warning/important */
     .badge { color: var(--bg); padding: 1px 5px;}
@@ -64,14 +64,14 @@
 /* ==================== global: panel */
     .panel-group .panel + .panel { margin-top: 5px; }
     .panel-group .panel-heading+.panel-collapse .panel-body { border-top: 1px solid var(--border); }
-    .panel { background-color: rgba(var(--rgb-gray), 0.2); border: none; border: none; box-shadow: none; }
+    .panel { background-color: rgba(var(--rgb-bg1), 0.8); box-shadow: none; }
         .panel .panel-heading { background-color: rgba(var(--rgb-accent), 0.5); color: var(--fg); border-bottom: var(--border); padding: 15px; text-transform: uppercase; }
             .panel .panel-heading span { color: var(--fg); }
             .panel .panel-heading .mdi::before { font-size: 16px; padding: 0; margin: 0; }
             .panel .panel-heading .penal-title { margin: 0; }
             .panel .panel-heading .panel-title .mdi::before { font-size: 16px; margin-right: 4px; }
-        .panel .panel-body { background-color: rgba(var(--bg), 0.5); border-top: 1px solid var(--border); border-top: none; }
-        .panel-collapse { background-color: rgba(var(--rgb-gray), 0.2); }
+        .panel .panel-body { background-color: rgba(var(--bg), 0.8); border-top: 1px solid var(--border); border-top: none; }
+        .panel-collapse { background-color: rgba(var(--rgb-bg1), 0.8); }
         .panel .panel-footer { background-color: rgba(var(--rgb-accent), 0.2); }
 
 /* ==================== topleft: statistics bar numOf windows/tabs/suspended */
@@ -91,30 +91,36 @@
         .search:focus { border: 1px solid var(--accent); box-shadow: none; color: var(--gray); font-weight: 300; transition: all 0.3s ease 0s; width: 360px; }
 
 /* ==================== global: modal */
-    .modal-dialog{z-index: 10000}
-    .modal-header .close 
-    { margin: 8px 2px 0 0; font-size: 36px; color: var(--fg); text-shadow: 0; }
-        .modal-body label {  font-weight: 400; }
-    .modal-footer { background-color: var(--bg); border-top: 1px solid var(--border); padding: 10px; margin-top:10px; }
+    .modal-dialog { border-radius: 6px; z-index: 10000; border: var(--border); box-shadow: 0 3px 9px rgba(var(--rgb-fg), .5); }
+        .modal-dialog>.modal-content { background-color: var(--bg); border: none; box-shadow: none; }
+        .modal-dialog>.modal-content>.modal-header { border-radius: 6px 6px 0 0; }
+            .modal-dialog>.modal-content>.modal-header .close { margin: 8px 2px 0 0; font-size: 36px; color: var(--fg); text-shadow: 0; }
+        .modal-dialog>.modal-content>.modal-body {  }
+            .modal-dialog>.modal-content>.modal-body label {  font-weight: bold; }
+        .modal-dialog>.modal-content>.modal-footer { background-color: var(--bg); border-top: 1px solid var(--border); padding: 10px; margin-top:10px; border-radius: 0 0 6px 6px; }
 
 /* ==================== hidden: popup page about-mindtabs */
     .modal-backdrop { background-color: var(--bg); }
         .modal-backdrop.in { opacity: .5; filter: alpha(opacity=50); }
     .mindTabsModal .modal-header { background-color: var(--bg1); padding: 5px 15px; border-bottom: 1px solid var(--border);}
         .mindTabsModal .modal-header h3 { margin-top: 20px; margin-bottom: 10px; color: var(--fg);}
-    .mindTabsModal .modal-content { background-color: var(--bg); }
     .mindTabsModal .modal-body img { float: left; margin-right: 10px; width: 100px; padding: 5px; }
     .mindTabsModal .badge { font-size: inherit; }
     .mindTabsModal .h4 b { padding: 5px 10px; background-color: var(--accent); color: var(--bg1); border-radius: 50%; }
     .mindTabsModal .btn-block { padding-top: 15px; padding-bottom: 15px; }
 
 /* ==================== bottomleft: tips panel */
-    .toolTipWrapper { position: absolute; left: 0; bottom: 0; width: 350px; }
-    .toolTipWrapper:hover { box-shadow: -1px -1px var(--border), 2px 2px var(--border);}
+    .toolTipWrapper { position: absolute; left: 0; bottom: 0; width: 350px; box-shadow: none; }
+    .toolTipWrapper:hover { box-shadow: 0 2px 2px rgba(0,0,0,.5); }
     /*.toolTipInnerName { margin: 0; padding: 5px 10px; border-bottom: 1px solid var(--bg1) border-top-right-radius: 5px; }
         .toolTipInnerName .iconWrapper { margin-right: -5px; border: 1px solid #e4e4e4; }
             .toolTipInnerName .iconWrapper:hover { border: 1px solid var(--border); }*/
     .toolTipInner { /*font-size: 12px; background-color: var(--bg1); padding: 10px;*/ display: none; }
+
+/* ==================== bottomright: controller and zoom setter */
+    .rightBottomWrapper { position: absolute; right: 0; bottom: 0; border-right: none; background-color: var(--bg1); border-top-left-radius: 3px; padding: 5px; box-shadow: none;}
+    .rightBottomWrapper:hover { box-shadow: 0 2px 2px rgba(0,0,0,.5); }
+        .rightBottomWrapper td { text-align: center; vertical-align: middle; color: #AAA; font-size: 21px; width: 21px; height: 21px; line-height: 1.1; }
 
 /* ==================== central: graph view */
     .link { fill: none; stroke: var(--line); stroke-width: 1px; }
