@@ -22,8 +22,9 @@
 /* ==================== global: icon style */
     .mdi::before { font-size: auto; }
 
-/* ==================== global: hide scroll bar */
+/* ==================== global: browser settings */
     ::-webkit-scrollbar { display:none }
+    ::-webkit-input-placeholder, ::-moz-placeholder { color: var(--gray); }
 
 /* ==================== global: key binding layout */
     kbd { color: var(--fg); border: 1px solid var(--border); box-shadow: 1px 1px var(--border); background-color: var(--bg0); }
@@ -63,14 +64,14 @@
 /* ==================== global: panel */
     .panel-group .panel + .panel { margin-top: 5px; }
     .panel-group .panel-heading+.panel-collapse .panel-body { border-top: 1px solid var(--border); }
-    .panel { background-color: transparent; border: none; border: none; box-shadow: none; }
+    .panel { background-color: rgba(var(--rgb-gray), 0.2); border: none; border: none; box-shadow: none; }
         .panel .panel-heading { background-color: rgba(var(--rgb-accent), 0.5); color: var(--fg); border-bottom: var(--border); padding: 15px; text-transform: uppercase; }
             .panel .panel-heading span { color: var(--fg); }
             .panel .panel-heading .mdi::before { font-size: 16px; padding: 0; margin: 0; }
             .panel .panel-heading .penal-title { margin: 0; }
             .panel .panel-heading .panel-title .mdi::before { font-size: 16px; margin-right: 4px; }
         .panel .panel-body { background-color: rgba(var(--bg), 0.5); border-top: 1px solid var(--border); border-top: none; }
-        .panel-collapse { background-color: var(--bg0); }
+        .panel-collapse { background-color: rgba(var(--rgb-gray), 0.2); }
         .panel .panel-footer { background-color: rgba(var(--rgb-accent), 0.2); }
 
 /* ==================== topleft: statistics bar numOf windows/tabs/suspended */
@@ -90,22 +91,30 @@
         .search:focus { border: 1px solid var(--accent); box-shadow: none; color: var(--gray); font-weight: 300; transition: all 0.3s ease 0s; width: 360px; }
 
 /* ==================== global: modal */
-.modal-dialog{z-index: 10000}
-.modal-header .close 
-{ margin: 8px 2px 0 0; font-size: 36px; color: var(--fg); text-shadow: 0; }
-    .modal-body label {  font-weight: 400; }
-.modal-footer { background-color: var(--bg); border-top: 1px solid var(--border); padding: 10px; margin-top:10px; }
+    .modal-dialog{z-index: 10000}
+    .modal-header .close 
+    { margin: 8px 2px 0 0; font-size: 36px; color: var(--fg); text-shadow: 0; }
+        .modal-body label {  font-weight: 400; }
+    .modal-footer { background-color: var(--bg); border-top: 1px solid var(--border); padding: 10px; margin-top:10px; }
 
-/* popup page invoked by information button */
-.modal-backdrop { background-color: #000; }
-    .modal-backdrop.in { opacity: .5; filter: alpha(opacity=50); }
-.mindTabsModal .modal-header { background-color: var(--bg1); padding: 5px 15px; border-bottom: 1px solid var(--border);}
-    .mindTabsModal .modal-header h3 { margin-top: 20px; margin-bottom: 10px; color: var(--fg);}
-.mindTabsModal .modal-content { background-color: var(--bg); }
-.mindTabsModal .modal-body img { float: left; margin-right: 10px; width: 100px; padding: 5px; }
-.mindTabsModal .badge { font-size: inherit; }
-.mindTabsModal .h4 b { padding: 5px 10px; background-color: var(--accent); color: var(--bg1); border-radius: 50%; }
-.mindTabsModal .btn-block { padding-top: 15px; padding-bottom: 15px; }
+/* ==================== hidden: popup page about-mindtabs */
+    .modal-backdrop { background-color: var(--bg); }
+        .modal-backdrop.in { opacity: .5; filter: alpha(opacity=50); }
+    .mindTabsModal .modal-header { background-color: var(--bg1); padding: 5px 15px; border-bottom: 1px solid var(--border);}
+        .mindTabsModal .modal-header h3 { margin-top: 20px; margin-bottom: 10px; color: var(--fg);}
+    .mindTabsModal .modal-content { background-color: var(--bg); }
+    .mindTabsModal .modal-body img { float: left; margin-right: 10px; width: 100px; padding: 5px; }
+    .mindTabsModal .badge { font-size: inherit; }
+    .mindTabsModal .h4 b { padding: 5px 10px; background-color: var(--accent); color: var(--bg1); border-radius: 50%; }
+    .mindTabsModal .btn-block { padding-top: 15px; padding-bottom: 15px; }
+
+/* ==================== bottomleft: tips panel */
+    .toolTipWrapper { position: absolute; left: 0; bottom: 0; width: 350px; }
+    .toolTipWrapper:hover { box-shadow: -1px -1px var(--border), 2px 2px var(--border);}
+    /*.toolTipInnerName { margin: 0; padding: 5px 10px; border-bottom: 1px solid var(--bg1) border-top-right-radius: 5px; }
+        .toolTipInnerName .iconWrapper { margin-right: -5px; border: 1px solid #e4e4e4; }
+            .toolTipInnerName .iconWrapper:hover { border: 1px solid var(--border); }*/
+    .toolTipInner { /*font-size: 12px; background-color: var(--bg1); padding: 10px;*/ display: none; }
 
 /* ==================== central: graph view */
     .link { fill: none; stroke: var(--line); stroke-width: 1px; }
