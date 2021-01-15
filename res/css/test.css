@@ -19,14 +19,10 @@
 	code { background-color:rgba(var(--rgb-fg), 0.1); color:var(--fg); }
 	p { margin:0 0 10px; }
 	a, button { color:var(--fg); background-color:transparent; text-decoration: none; }
-		a:link { cursor:pointer; }
-		a:focus, a:visited, a:hover, .actionsMenu .input-group:hover, .actionsMenu .input-group-addon:hover, .actionsMenu span:hover,
-		.input-group-addon:hover, .input-group-addon:focus,
-		.nav > li > a:focus, a:focus, .actionsMenu .input-group:focus, .actionsMenu .input-group-addon:focus, .actionsMenu span:focus, .currentAction button, .currentAction button:focus, .currentAction button:hover { cursor:pointer; text-decoration:none; }
-		a:focus, a:visited { color:var(--fg); }
-		a:hover, .actionsMenu .input-group:hover, .actionsMenu .input-group-addon:hover, .actionsMenu span:hover,
-		.input-group-addon:hover, .input-group-addon:focus,
-		.nav > li > a:focus, a:focus, .actionsMenu .input-group:focus, .actionsMenu .input-group-addon:focus, .actionsMenu span:focus, .currentAction button, .currentAction button:focus, .currentAction button:hover { color:var(--accent); }
+		a:link, a:active, a:focus, a:visited, a:hover, .input-group:hover, .actionsMenu span:hover, .input-group-addon:hover, .input-group-addon:focus, .input-group:focus, .actionsMenu span:focus, .currentAction button, .currentAction button:focus, .currentAction button:hover, .currentAction button:focus { cursor:pointer; text-decoration:none; }
+		a:focus, a:visited, .input-group-addon:focus, .input-group:focus, .actionsMenu span:focus { color:var(--fg) }
+		a:hover, .input-group:hover, .actionsMenu span:hover, .input-group-addon:hover, .currentAction button, .currentAction button:hover { color:var(--accent) }
+		a:active { color: var(--blue) }
 		.disabled button, .disabled button:focus, .disabled button:hover { color:var(--gray); background-color:transparent; cursor:not-allowed; }
 
 /* ==================== global:icon style */
