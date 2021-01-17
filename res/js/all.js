@@ -941,7 +941,7 @@ if (typeof jQuery === "undefined") {
         this.$body = e("body");
         this.$scrollElement = this.$element.on("scroll.bs.scroll-spy.data-api", s);
         this.options = e.extend({}, t.DEFAULTS, n);
-        this.selector = (this.options.target || (r = e(i).attr("href")) && r.replace(/.*(?=#[^\s]+$)/, "") || "") + " .nav li > a";
+        this.selector = (this.options.target || (r = e(i).attr("href")) && r.replace(/.*(?=#[^\s]+$)/, "") || "") + " .notify-row li > a";
         this.offsets = e([]);
         this.targets = e([]);
         this.activeTarget = null;
@@ -33067,7 +33067,7 @@ Tips = function (e) {
 };
 ItemsStatistics = function () {
     function e() {
-        var e = $("header .nav.top-menu .badge");
+        var e = $("header .notify-row.top-menu .badge");
         var t = e.eq(0);
         var i = e.eq(1);
         var n = e.eq(2);
