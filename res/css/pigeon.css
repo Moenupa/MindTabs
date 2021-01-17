@@ -36,6 +36,9 @@
     --rgb-blue: 23,123,230;
     --rgb-purple: 162,92,196;
     --rgb-pink: 230,64,95;
+
+    --accent:var(--cyan);
+    --rgb-accent:var(--rgb-cyan);
 }
 
 :root[data-theme="dark"] { /* dark theme */
@@ -76,4 +79,7 @@
     --rgb-blue: 102,163,204;
     --rgb-purple: 184,102,204;
     --rgb-pink: 204,102,163;
+
+    --accent:var(--blue);
+	--rgb-accent:var(--rgb-blue);
 }

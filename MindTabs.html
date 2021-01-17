@@ -12,11 +12,10 @@
 	<link rel="stylesheet" type="text/css" href="/res/css/jquery-ui.structure.min.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/jquery-ui.theme.min.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/bootstrapv3.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/bootstrap-reset.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/materialdesignicons.min.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/styles.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/style-responsive.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/test.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/style-responsive.css" />
 
 	<script src="/res/js/jquery.min.js"></script>
 	<script src="/res/js/jquery-ui.min.js"></script>
@@ -55,7 +54,7 @@
 				</ul>
 				<ul class="nav pull-right top-menu">
 					<li>
-						<input type="text" placeholder="Search URL" class="form-control search searchControl mdi mdi-magnify" />
+						<input type="text" placeholder="&#xF0349 Search Tabs by URL or Title" class="form-control search searchControl mdi mdi-magnify" />
 					</li>
 					<li>
 						<div id="themeSwitch" class="headerToggleCircle tooltips btn-clickable" data-placement="bottom" title="Switch Light/Dark Theme" data-container="body" >
@@ -109,7 +108,7 @@
 							</a>
 						</li>
 					</ul>
-					<div class="aboutWrapper text-center">
+					<div class="aboutWrapper">
 						<a href="http://github.com/Moenupa" class="fg-purple">by Moenupa</a><br />
 						<small>BETA v0.1.1</small>
 					</div>
@@ -243,7 +242,7 @@
 			<div class="modal-content">
 				<div class="modal-header">
 					<button aria-hidden="true" data-dismiss="modal" class="mdi mdi-close pull-right" type="button"></button>
-					<h3 class="text-center">MindTabs</h3>
+					<h3>MindTabs</h3>
 				</div>
 				<div class="modal-body">
 					<div>
@@ -257,13 +256,13 @@
 						</p>
 						<p>But for every user MindTabs is a big picture with endless deeping & grouping. So find your personal use case & give us feedback.</p>
 					</div>
-					<p class="text-larger">Learn more about key features:</p>
+					<p style="font-size: larger;">Learn more about key features:</p>
 					<div class="panel-group" id="accordion">
 						<div class="panel">
 							<div class="panel-heading">
 								<div class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseActions" title="Learn more about key actions" id="a4">
-										<p class="mdi mdi-check-all">Actions</p>
+										<div class="mdi mdi-check-all">Actions</div>
 									</a>
 								</div>
 							</div>
@@ -324,7 +323,7 @@
 							<div class="panel-heading">
 								<div class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSearch" title="Learn more about search" id="a5">
-										<p class="mdi mdi-magnify">Searching</p>
+										<div class="mdi mdi-magnify">Searching</div>
 									</a>
 								</div>
 							</div>
@@ -343,7 +342,7 @@
 							<div class="panel-heading">
 								<div class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTabs" title="Learn more about Tabs, groups & windows" id="a6">
-										<p class="mdi mdi-share-variant">Tabs, groups, windows</p>
+										<div class="mdi mdi-share-variant">Tabs, groups, windows</div>
 									</a>
 								</div>
 							</div>
@@ -373,7 +372,7 @@
 							<div class="panel-heading">
 								<div class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseHotKeys" title="Learn more about hotkeys for quick access" id="a7">
-										<p class="mdi mdi-keyboard-variant">Hotkeys</p>
+										<div class="mdi mdi-keyboard-variant">Hotkeys</div>
 									</a>
 								</div>
 							</div>
@@ -420,52 +419,47 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<div class="text-center">
-						<a href="https://github.com/Moenupa" target="_blank" class="fg-purple">by Moenupa</a>
-						<br />
-						<small>BETA v0.1.1
-						</small>
-					</div>
+					<a href="https://github.com/Moenupa" target="_blank" class="fg-purple">by Moenupa</a><br />
+					<small>BETA v0.1.1</small>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div aria-hidden="true" role="dialog" tabindex="-1" id="modalIntro" class="modal fade mindTabsModal">
-		<div class="modal-dialog" style="max-width: 400px">
+		<div id="welcome" class="modal-dialog" style="max-width: 400px">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-					<h4 class="modal-title">&nbsp;</h4>
-					<h3 class="text-center">Welcome to MindTabs!
-					</h3>
+					<button aria-hidden="true" data-dismiss="modal" class="mdi mdi-close pull-right" type="button"></button>
+					<h3>Welcome to MindTabs!</h3>
 				</div>
 				<div class="modal-body">
-					<div class="text-center">
+					<div style="text-align:center;margin-bottom:20px;">
 						<img src="res/image/icon/diamond.png" style="float: none" />
 						<h4>Please read this tips before you start<br />
 							& become a PRO just in a minute!</h4>
 					</div>
 					<div class="clearfix"></div>
-					<h4>&nbsp;</h4>
-					<div class="text-center">
-						<p class="h5"><span class="h4"><b>1</b></span>&nbsp;Select any item to perform action.&nbsp;</p>
-						<div>&nbsp;</div>
-						<p class="h5"><span class="h4"><b>2</b></span>&nbsp;Choose action for selected item(s).</p>
-						<div>&nbsp;</div>
-						<p class="h5"><span class="h4"><b>3</b></span>&nbsp;Feel the true power of MindTabs!</p>
+					<ul id="welcome-steps">
+						<li>
+							<span class="badge bg-primary"><b>1</b></span>
+							<span>Select any item to perform action.</span>
+						</li>
+						<li>
+							<span class="badge bg-primary"><b>2</b></span>
+							<span>Choose action for selected item(s).</span>
+						</li>
+						<li>
+							<span class="badge bg-primary"><b>3</b></span>
+							<span>Feel the true power of MindTabs!</span>
+						</li>
+					</ul>
+					<div style="padding:24px 24px 0">
+						<a id="start" class="btn btn-lg btn-primary btn-block" data-dismiss="modal">Start MindTabs</a>
 					</div>
-					<div class="text-center well-lg">
-						<a class="btn btn-lg btn-primary btn-block" data-dismiss="modal">Start MindTabs</a>
-					</div>
-					<div class="modal-footer">
-						<div class="text-center">
-							<a href="http://timedesk.org" target="_blank" class="fg-purple">by Timedesk team
-							</a>
-							<br />
-							<small>Currently in beta version
-							</small>
-						</div>
-					</div>
+				</div>
+				<div class="modal-footer">
+					<a href="https://github.com/Moenupa" target="_blank" class="fg-purple">by Moenupa</a><br />
+					<small>BETA v0.1.1</small>
 				</div>
 			</div>
 		</div>
