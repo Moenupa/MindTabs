@@ -1,7 +1,12 @@
 ﻿/* 
  * Use position to search for regional css
  * e.g. topright search for the elements located on the top-right
+<<<<<<< Updated upstream
  * NOTE: dash here is omitted so to avoid css syntax collision
+=======
+ * positions available: "central", "topleft", "topright", "bottomleft", "bottomright", "midleft", "midright"
+ * NOTE: dash/space is omitted so to avoid css syntax collision
+>>>>>>> Stashed changes
  * 
  * There are two backgrounds available: Dark and light
  * At this point it only supports Browser-Default theme
@@ -10,6 +15,7 @@
 
 @font-face{font-family:"Material Design Icons";src:url("../font/materialdesignicons-webfont.eot?v=5.8.55");src:url("../font/materialdesignicons-webfont.eot?#iefix&v=5.8.55") format("embedded-opentype"),url("../font/materialdesignicons-webfont.woff2?v=5.8.55") format("woff2"),url("../font/materialdesignicons-webfont.woff?v=5.8.55") format("woff"),url("../font/materialdesignicons-webfont.ttf?v=5.8.55") format("truetype");font-weight:normal;font-style:normal}
 
+<<<<<<< Updated upstream
 @media (prefers-color-scheme: light) { 
 
 :root { /* light theme */
@@ -90,6 +96,23 @@
 html, body { height: 100%; border-color: var(--border); }
 html, body, .ui-widget, .context-menu-list, .node text, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: initial; }
 html, body, .ui-widget, .context-menu-list, .node text { font-family: initial; font-size: 13px; color: var(--fg); }
+=======
+:root {
+    /* accent color, cyan by default */
+    --accent: var(--cyan);
+    --rgb-accent: var(--rgb-cyan);
+    /* symbols displayed by font, notice: !!!have dependency on "Material Design Icons" Font!!! */
+    --mdi-check: "\F012C";
+    --mdi-arrow-right : "\F0CE0";
+    --mdi-arrow-left : "\F0CDE";
+    --mdi-star-outline: "\F04D2";
+    --mdi-star: "\F04CE";
+}
+
+html, body { height: 100%; border-color: var(--border); }
+html, body, .ui-widget, .node text, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: initial; }
+html, body, .ui-widget, .node text { font-family: initial; font-size: 13px; color: var(--fg); }
+>>>>>>> Stashed changes
 
 /*GLOBAL LINKS*/
 a, button { color: var(--light); background-color: transparent; }
@@ -114,7 +137,11 @@ a, button { color: var(--light); background-color: transparent; }
 .text-info { color: var(--blue); }
 
 /*LAYOUT*/
+<<<<<<< Updated upstream
 .menuLayout { position: fixed; top: 2px; background-color: #f7f7f7; padding: 7px 0 5px; z-index: 1; }
+=======
+.menuLayout { position: fixed; top: 2px; background-color: var(--fg); padding: 7px 0 5px; z-index: 1; }
+>>>>>>> Stashed changes
 .menuLayoutLeft { left: 0; top: 0; bottom: 0; width: 36px; }
 .menuLayoutTop { left: 36px; top: 0; right: 0; padding-bottom: 0; }
     .menuLayoutTop .tokenfield { border-right: 1px solid var(--bg1); box-shadow: none; }
@@ -133,8 +160,13 @@ a, button { color: var(--light); background-color: transparent; }
         .menuRow .nav-tabs > li .tabName { min-width: 25px; max-width: 110px; overflow: hidden; text-overflow: ellipsis; display: inline-block; }
 
 
+<<<<<<< Updated upstream
 .nav-tabs > li a { border: 1px solid var(--line); background-color: var(--bg); margin-right: 2px; color: #454545; }
 .nav-tabs > li > a:hover { border-color: var(--border) #cdcdcd var(--line); background-color: var(--bg2); }
+=======
+.nav-tabs > li a { border: 1px solid var(--line); background-color: var(--bg); margin-right: 2px; color: var(--fg); }
+.nav-tabs > li > a:hover { border-color: var(--border); background-color: var(--bg2); }
+>>>>>>> Stashed changes
 
 .menuRow .nav-tabs > li:nth-last-child(1) a { border: none; border-bottom: 1px solid transparent; border-top: 1px solid transparent; margin-top: 1px; margin-bottom: 1px; box-shadow: none; background-color: transparent; width: 36px; text-align: center; margin-left: -2px; margin-right: 0; }
 .nav-tabs > li:nth-last-child(1) a:hover { background-color: #FBFBFB; }
@@ -160,7 +192,11 @@ a, button { color: var(--light); background-color: transparent; }
 .triangle { position: fixed; top: 36px; right: 21px; z-index: 4; width: 0px; height: 0px; border-style: solid; border-width: 0 10px 10px 10px; border-color: transparent transparent var(--bg1) transparent; }
 .myPopover { position: fixed; top: 44px; right: 9px; background-color: var(--bg1); z-index: 3; padding: 20px 30px; border: 1px solid var(--border); box-shadow: 0 0 15px var(--fg2); }
     .myPopover .menuRow { padding: 5px; }
+<<<<<<< Updated upstream
         .myPopover .menuRow:last-of-type { padding: 10px; background-color: #f7f7f7; margin: 0 -30px -20px; border-top: 1px solid var(--border); overflow: hidden; }
+=======
+        .myPopover .menuRow:last-of-type { padding: 10px; background-color: var(--fg); margin: 0 -30px -20px; border-top: 1px solid var(--border); overflow: hidden; }
+>>>>>>> Stashed changes
 
 /*TILES VIEW*/
 .tile { /*border: 2px solid var(--border); margin: 5px; width: 200px; float: left;*/ overflow: hidden; /*height: 100px;*/ padding: 0px; color: var(--bg1); background-size: 100%; box-shadow: 0px 0px 1px var(--fg1); background-color: var(--bg1); }
@@ -171,10 +207,17 @@ a, button { color: var(--light); background-color: transparent; }
     .tile:before { content: ""; display: block; padding-top: 57%; /* initial ratio of 1:1*/ }
 .tileContent { position: absolute; top: 0; left: 0; bottom: 0; right: 0; }
 .tileSelectIcon { position: absolute; top: 0; right: 0; width: 36px; height: 36px; }
+<<<<<<< Updated upstream
     .tileSelectIcon:before { position: absolute; content: "\e08a"; color: var(--bg1); right: 4px; top: 4px; font-family: iconFont; z-index: 1002; opacity: 0.5; }
     .tileSelectIcon:after { border-left: 36px solid transparent; border-top: 36px solid var(--black); content: ""; display: block; height: 0; position: absolute; right: 0px; top: 0px; width: 0; z-index: 1001; opacity: 0.2; }
 .tile:hover .tileSelectIcon:before, .tile:hover .tileSelectIcon:after { opacity: 1; border-top-color: var(--fg1); }
 .tile.selected .tileSelectIcon:before { position: absolute; content: "\e08a"; color: var(--bg1); right: 4px; top: 4px; font-family: iconFont; z-index: 1002; opacity: 1; }
+=======
+    .tileSelectIcon:before { position: absolute; content: var(--mdi-check); color: var(--bg1); right: 4px; top: 4px; font-family: "Material Design Icons"; z-index: 1002; opacity: 0.5; }
+    .tileSelectIcon:after { border-left: 36px solid transparent; border-top: 36px solid var(--black); content: ""; display: block; height: 0; position: absolute; right: 0px; top: 0px; width: 0; z-index: 1001; opacity: 0.2; }
+.tile:hover .tileSelectIcon:before, .tile:hover .tileSelectIcon:after { opacity: 1; border-top-color: var(--fg1); }
+.tile.selected .tileSelectIcon:before { position: absolute; content: var(--mdi-check); color: var(--bg1); right: 4px; top: 4px; font-family: "Material Design Icons"; z-index: 1002; opacity: 1; }
+>>>>>>> Stashed changes
 .tile.selected .tileSelectIcon:after { border-left: 36px solid transparent; border-top: 36px solid #007FFF; content: ""; display: block; height: 0; position: absolute; right: 0px; top: 0px; width: 0; z-index: 1001; opacity: 1; }
 /*fixed tiles height & tiles selected bug*/
 .tile span, .tile h4 { display: inline-block; margin: 0px; padding: 0 5px; height: 38px; word-wrap: break-word; font-size: 13px; font-weight: normal; /*background-color: rgba(51, 51, 51, 0.8);*/ }
@@ -191,12 +234,21 @@ a, button { color: var(--light); background-color: transparent; }
 
 @media (min-width:920px) and (max-width:1100px) {
     .col-tiles-md-33 { width: 33.3333333333333%; }
+<<<<<<< Updated upstream
 }
 
 @media (min-width:1100px) and (max-width:1300px) {
     .col-tiles-md-25 { width: 25%; }
 }
 
+=======
+}
+
+@media (min-width:1100px) and (max-width:1300px) {
+    .col-tiles-md-25 { width: 25%; }
+}
+
+>>>>>>> Stashed changes
 @media (min-width:1300px) and (max-width: 1700px) {
     .col-tiles-lg-20 { width: 20%; }
 }
@@ -248,7 +300,11 @@ a, button { color: var(--light); background-color: transparent; }
 .dateWrapper .linkItem.selected { box-shadow: 0 0 1px var(--bg1)fcc inset; font-size: 8px; }
     .dateWrapper .linkItem.selected h5 { color: var(--gray); }
     .dateWrapper .linkItem.selected img { -moz-opacity: 0.60; -khtml-opacity: 0.60; opacity: 0.60; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=60); }
+<<<<<<< Updated upstream
     .dateWrapper .linkItem.selected .linkItemInner:before { position: absolute; content: "\e08a"; color: var(--bg1); left: 4px; top: 2px; font-family: iconFont; z-index: 1002; }
+=======
+    .dateWrapper .linkItem.selected .linkItemInner:before { position: absolute; content: var(--mdi-check); color: var(--bg1); left: 4px; top: 2px; font-family: "Material Design Icons"; z-index: 1002; }
+>>>>>>> Stashed changes
     .dateWrapper .linkItem.selected .linkItemInner:after { border-right: 25px solid transparent; border-top: 25px solid #007FFF; content: ""; display: block; height: 0; position: absolute; left: 0px; top: 0px; width: 0; z-index: 1001; }
 
 
@@ -357,6 +413,7 @@ a, button { color: var(--light); background-color: transparent; }
 @media (min-width:768px) {
 }
 
+<<<<<<< Updated upstream
 
 
 /*STARTPAGE*/
@@ -370,6 +427,21 @@ a, button { color: var(--light); background-color: transparent; }
 .startPageText .startPageTextTitle { font-size: 36pt; letter-spacing: 0; line-height: 38pt; }
 .startPageText p { line-height: 2em; font-size: 115%; }
 
+=======
+
+
+/*STARTPAGE*/
+.startPageQuote { max-width: 800px; margin: 0px auto; opacity: 0.7; }
+
+.registerStartPageText { margin-bottom: 36px; }
+
+    .registerStartPageText a { min-width: 200px; }
+
+.startPageText h4 { line-height: 2.2; margin-bottom: 60px; text-align: justify; }
+.startPageText .startPageTextTitle { font-size: 36pt; letter-spacing: 0; line-height: 38pt; }
+.startPageText p { line-height: 2em; font-size: 115%; }
+
+>>>>>>> Stashed changes
 .startPageTopIcon { margin: 20px auto; }
     .startPageTopIcon span { font-size: 20pt; }
 
@@ -419,16 +491,22 @@ form label.error { display: none !important; }
     .h_iframe .ratio { display: block; width: 100%; height: auto; }
     .h_iframe iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+<<<<<<< Updated upstream
 
 .ui-autocomplete.ui-front { z-index: 10002 !important; }
 
 
+=======
+.ui-autocomplete.ui-front { z-index: 10002 !important; }
+
+>>>>>>> Stashed changes
 /*PLACEHOLDERS*/
 ::-webkit-input-placeholder { /* WebKit browsers */ color: var(--gray); }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ color: var(--gray); }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */ color: var(--gray); }
 :-ms-input-placeholder { /* Internet Explorer 10+ */ color: var(--gray); }
 
+<<<<<<< Updated upstream
 
 
 .colorPreview { width: 36px; height: 36px; margin: 0px; margin-right: 5px; margin-bottom: 5px; float: left; position: relative; }
@@ -438,6 +516,8 @@ form label.error { display: none !important; }
 
 
 
+=======
+>>>>>>> Stashed changes
 /* COLORS (FONT, BACKGROUND, BORDER, OUTLINE */
 .fg-color-blue { color: var(--blue) !important; }
 .fg-color-green { color: var(--green) !important; }
@@ -484,8 +564,11 @@ form label.error { display: none !important; }
 .button.mini { font-size: .9em !important; }
 
 /*EXTENSION*/
+<<<<<<< Updated upstream
 .topWrapper { border-bottom: 1px solid var(--bg1); margin: 0 auto; }
 .topWrapper, .rightBottomWrapper /*.toolTipInnerName, .accordion-toggle p*/ { background-color: #f7f7f7; padding: 5px; }
+=======
+>>>>>>> Stashed changes
 .treeWrapper { padding: 0px; margin: 0 auto; margin-top: -4px; position: relative; top: 0px; bottom: 0; right: 0; }
 .infoWrapper { position: absolute; top: 50px; bottom: 0; right: 0; background-color: var(--bg1); border-left: 1px solid var(--bg1) }
 .infoInner { overflow-y: scroll; position: absolute; top: 0; bottom: 45px; padding-bottom: 20px; padding-right: 15px; }
@@ -506,6 +589,7 @@ p { margin: 0 0 10px; }
 
 .toolTipInner { /*font-size: 12px; background-color: var(--bg1); padding: 10px;*/ display: none; }
 
+<<<<<<< Updated upstream
 /*CAROUSEL*/
 .carousel img { height: 120px; }
 .carousel-caption { position: absolute; left: 0; right: 0; top: 0px; z-index: 10; padding-top: 0; padding-bottom: 0; color: var(--fg1); text-align: left; text-shadow: none; }
@@ -517,10 +601,33 @@ p { margin: 0 0 10px; }
 
 
 .rightBottomWrapper { position: absolute; right: 0; bottom: 0; border-right: none; background-color: var(--bg1); border-top-left-radius: 3px; }
+=======
+/* bottomleft tips as CAROUSEL which creates a slide-like effect */
+.carousel img { height: 120px; }
+.carousel-caption { position: absolute; left: 0; right: 0; top: 0px; z-index: 10; padding-top: 0; padding-bottom: 0; color: var(--fg1); text-align: left; text-shadow: none; }
+    .carousel-caption b { font-size: 12px; }
+.carousel-control.right, .carousel-control.left 
+{ background-image: none; text-shadow: none; color: var(--accent); font-size: 12px; top: 85%; z-index: 11; opacity: 1; padding-top: 10px; text-decoration: none; }
+    .carousel-control.right:after, .carousel-control.left:before 
+    { color: var(--gray); font-family: "Material Design Icons"; position: relative;  }
+    .carousel-control.right:after 
+    { content: var(--mdi-arrow-right); margin-left: 2px; }
+    .carousel-control.left:before 
+    { content: var(--mdi-arrow-left); margin-right: 2px; }
+    .carousel-control.left:hover, .carousel-control.right:hover 
+    { color: var(--purple); text-decoration: none; }
+        .carousel-control.left:hover:before, .carousel-control.right:hover:after 
+        { color: var(--purple); }
+/* bottomleft tips ends */
+
+
+.rightBottomWrapper { position: absolute; right: 0; bottom: 0; border-right: none; background-color: var(--bg1); border-top-left-radius: 3px; padding: 5px; }
+>>>>>>> Stashed changes
 .rightBottomWrapper, .toolTipWrapper { box-shadow: 1px 0 3px rgba(0, 0, 0, 0.15); }
     .rightBottomWrapper td { text-align: center; vertical-align: middle; color: #AAA; font-size: 21px; width: 21px; height: 21px; line-height: 1.1; }
 .iconWrapper:hover { color: var(--bg1); background-color: var(--accent); cursor: pointer; }
 
+<<<<<<< Updated upstream
 
 .context-menu-item { padding: 7px; padding-left: 24px; background-color: #f7f7f7; }
     .context-menu-item:hover { color: var(--bg1); background-color: var(--accent); }
@@ -551,6 +658,65 @@ svg { width: 100%; padding: 0; margin: 0; overflow: hidden; }
 
 .node.active circle { stroke: rgba(var(--rgb-red), 0.5); stroke-width: 2px; }
 .node.selected circle, .node.selected:hover circle { stroke: rgba(var(--rgb-purple), 1); stroke-width: 3px; fill: var(--bg); }
+=======
+svg { width: 100%; padding: 0; margin: 0; overflow: hidden; }
+
+/* ========= central treeview showing tab relations: link(edge) and node ========= */
+/* central link connects nodes */
+.link { fill: none; stroke: var(--line); stroke-width: 1px; }
+    .link.suspended { stroke: rgba(var(--rgb-orange), 0.2); }
+    .link.active { stroke: rgba(var(--rgb-purple), 0.8); stroke-width: 2px; }
+    .link.suspended.active { stroke: rgba(var(--rgb-red), 0.8); }
+.templink {
+    fill: none; stroke: var(--line); stroke-width: 0.5px;
+}
+.overlay { background-color: var(--bg); }
+
+/* central websites are nodes, text - website title, circle - website icon */
+    .node
+    { cursor: pointer; }  
+        .node text 
+        { fill: var(--fg); padding: 10px; font-size: 14px; text-decoration: none; }
+            .node:hover text, .node.selected text 
+            { text-decoration: underline; }
+            .node.active text 
+            { fill: var(--red); }
+            .node.selected text 
+            { fill: var(--purple); }
+
+        .node circle 
+        { stroke: rgba(var(--rgb-blue), 0.5); stroke-width: 2px; fill: var(--bg1); }
+            .node:hover circle, .node.collapsed:hover circle, .node.suspended:hover circle, .node.suspended.collapsed:hover circle 
+            { stroke: rgba(var(--rgb-purple), 0.8); }
+            .node.collapsed circle 
+            { stroke: rgba(var(--rgb-green), 0.8); fill: var(--bg2); }
+
+            .node.suspended circle 
+            { stroke: rgba(var(--rgb-orange), 0.5); stroke-width: 2px }
+                .node.suspended.collapsed circle 
+                { stroke: rgba(var(--rgb-pink), 0.8); }
+                .node.suspended:hover circle, .node.suspended.collapsed:hover circle 
+                { fill: var(--orange);}
+            .node.active circle { stroke: rgba(var(--rgb-red), 0.5); stroke-width: 2px; }
+            .node.selected circle, .node.selected:hover circle { stroke: rgba(var(--rgb-purple), 1); stroke-width: 3px; fill: var(--bg); }
+        .node.faded
+        { opacity: 0.2; }
+        .node.selected image 
+        { href: "/res/image/svg/Selected.svg"; }
+
+    /* ghostcircle */
+    .ghostCircle.show 
+    { display:block; }
+    .ghostCircle, .activeDrag .ghostCircle
+    { display: none; }
+
+    /* central context menu  */
+    .contextMenu 
+    { z-index: 1000; }
+    .contextMenu.show 
+    { display:block; }
+/* ======== Central treeview part ends ======== */
+>>>>>>> Stashed changes
 
 .navbar { margin-bottom: 0; }
     .navbar .navbar-right { padding-right: 0; }
@@ -560,7 +726,11 @@ svg { width: 100%; padding: 0; margin: 0; overflow: hidden; }
 .navbar-nav > li > a { background-color: var(--bg); padding: 16px 16px; }
 .navbar-default .navbar-nav > li > a:hover { color: var(--accent); }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus { color: var(--bg1); background-color: var(--accent); }
+<<<<<<< Updated upstream
     .navbar-default .navbar-nav > .active > a:before { content: "\e08a"; font-family: iconFont; color: var(--bg1); margin-right: 5px; }
+=======
+    .navbar-default .navbar-nav > .active > a:before { content: var(--mdi-check); font-family: "Material Design Icons"; color: var(--bg1); margin-right: 5px; }
+>>>>>>> Stashed changes
 .navbar-default .navbar-nav > .active:before { content: ""; position: absolute; bottom: -5px; width: 100%; height: 5px; background-color: #df502b; }
 
 .navbar-default .navbar-nav > .activeRefresh > a, .navbar-default .navbar-nav > .activeRefresh > a:hover { color: var(--accent); }
@@ -627,12 +797,84 @@ ul.sidebar-menu li a { color: var(--fg); display: block; font-size: 16px; outlin
 .merge-header { margin-right: 165px; }
 .fixed-top { box-shadow: 1px 0 3px rgba(0, 0, 0, 0.15); position: fixed; }
 .wrapper { display: inline-block; margin-top: 80px; padding: 15px; width: 100%; }
+<<<<<<< Updated upstream
 .brand { background: none repeat scroll 0 0 var(--accent); float: left; height: 80px; position: relative; width: 165px; }
 a.logo { color: var(--bg1); float: left; font-size: 22px; margin: 23px 0 0 15px; }
     a.logo:hover, a.logo:focus { outline: medium none; text-decoration: none; }
     a.logo span { color: var(--red); }
 #top_menu .nav > li, ul.top-menu > li { float: left; }
 .notify-row { float: left; margin-left: 25px; margin-top: 20px; }
+=======
+
+/* ========= leftside side bar ========= */
+.brand 
+{ background: none repeat scroll 0 0 rgba(var(--rgb-accent), 0.8); float: left; height: 80px; position: relative; width: 165px; text-align: center;}
+    a.logo 
+    { background: no-repeat url("../image/logo/MindTabs.svg"); color: var(--bg1); float: left; font-size: 22px; margin: 23px 0 0 5px; padding-left: 35px;}
+        a.logo:hover, a.logo:focus 
+        { outline: medium none; text-decoration: none; }
+        a.logo span 
+        { color: var(--red); }
+    #top_menu .nav > li, ul.top-menu > li 
+    { float: left; }
+    .notify-row 
+    { float: left; margin-left: 25px; margin-top: 20px; }
+    /* topleft menu nav-bar */
+    .sidebar-toggle-box 
+    { background: none repeat scroll 0 0 var(--bg); border-radius: 50%; float: inline-start; height: 36px; margin-left: -15px; margin-top: 20px; position: absolute; right: -18px; width: 36px; text-align: center;}
+        .sidebar-toggle-box .mdi-menu 
+        { color: var(--fg); cursor: pointer; display: inline-block; font-size: 20px; padding-top: 4px; text-align: center; }
+        .sidebar-toggle-box:hover 
+        { background: none repeat scroll 0 0 var(--accent); }
+        .sidebar-toggle-box:hover .mdi-menu 
+        { color: var(--bg1) }
+    .hide-left-bar 
+    { width: 55px !important; transition: ease all 0s; }
+        .hide-left-bar ul.sidebar-menu li a span, .hide-left-bar ul.sidebar-menu li a sup, .hide-left-bar .aboutWrapper, .hide-left-bar .logo 
+        { display: none; transition: ease all 0s; }
+        .hide-left-bar .sidebar-toggle-box 
+        { float: none; left: 25px; }
+    #sidebar { transition: ease all 0s; }
+    #sidebar .leftside-navigation .sidebar-menu li 
+    { transition: ease all 0s; }
+    .open-right-bar 
+    { right: 0 !important; transition: ease all 0s; }
+    .merge-left 
+    { margin-left: 60px !important; }
+    .hide-right-bar 
+    { margin-right: -165px !important; transition: ease all 0s; }
+    /* menu icon to show/hide description */
+    .toggle-right-box 
+    { background: none repeat scroll 0 0 var(--bg); border-radius: 50%; float: left; height: 36px; width: 36px; }
+        .toggle-right-box:hover 
+        { background: none repeat scroll 0 0 var(--accent); }
+            .toggle-right-box:hover .mdi-menu 
+            { color: var(--gray); }
+        .toggle-right-box .mdi-menu 
+        { color: var(--fg); cursor: pointer; display: inline-block; font-size: 15px; padding: 10px; }
+    .right-sidebar 
+    { background: none repeat scroll 0 0 rgba(var(--rgb-accent), 0.05); height: 100%; position: fixed; right: -165px; top: 0; transition: ease all 0s; width: 165px; z-index: 1000; }
+    .open-right-panel 
+    { margin-left: -165px !important; }
+    .right-sidebar .search-row 
+    { padding: 20px; }
+        .right-sidebar .search-row input 
+        { background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3); border: medium none; color: #707076; font-size: 12px; }
+    .right-side-accordion 
+    { margin-top: 6px; }
+        .right-side-accordion .head 
+        { display: inline-block; padding: 20px; text-transform: uppercase; width: 100%; }
+        .right-side-accordion .red-bg 
+        { background: none repeat scroll 0 0 var(--red); color: var(--bg1); }
+        .right-side-accordion .cyan-bg 
+        { background: none repeat scroll 0 0 var(--cyan); color: var(--bg1); }
+        .right-side-accordion .purple-bg 
+        { background: none repeat scroll 0 0 var(--purple); color: var(--bg1); }
+        .right-side-accordion .yellow-bg 
+        { background: none repeat scroll 0 0 var(--yellow); color: var(--bg1); }
+/* ========= leftside side bar ends ========= */
+
+>>>>>>> Stashed changes
 /* topleft statistics bar display number of windows/tabs/suspendedTabs */
 ul.top-menu { margin-right: 15px; margin-top: 0; }
     ul.top-menu > li > a { background: none repeat scroll 0 0 var(--bg); border-radius: 50%; color: var(--fg2); font-size: 20px; margin-right: 16px; height: 36px; width: 36px; padding: 4px; text-align: center; }
@@ -684,6 +926,7 @@ ul.top-menu { margin-right: 15px; margin-top: 0; }
     .top-nav ul.top-menu > li > a:hover, .top-nav ul.top-menu > li > a:focus { background: none repeat scroll 0 0 var(--bg) !important; border: 1px solid var(--border); border-radius: 100px; }
 .top-nav .dropdown-menu.extended.logout { top: 50px; }
 .top-nav .nav .caret { border-bottom-color: #A4AABA; border-top-color: #A4AABA; }
+<<<<<<< Updated upstream
 .top-nav ul.top-menu > li > a:hover .caret { border-bottom-color: #000000; border-top-color: #000000; }
 .position-center { margin: 0 auto; width: 60%; }
 .notify-arrow { background: url("../images/top-arrow.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); height: 10px; left: 16px; margin-top: 10px; opacity: 1; position: absolute; top: -20px; transition: all 0.25s ease 0s; width: 18px; z-index: 10; }
@@ -717,6 +960,18 @@ ul.top-menu { margin-right: 15px; margin-top: 0; }
     .right-side-accordion .terques-bg { background: none repeat scroll 0 0 var(--cyan); color: var(--bg1); }
     .right-side-accordion .purple-bg { background: none repeat scroll 0 0 var(--purple); color: var(--bg1); }
     .right-side-accordion .yellow-bg { background: none repeat scroll 0 0 var(--yellow); color: var(--bg1); }
+=======
+.top-nav ul.top-menu > li > a:hover .caret { border-bottom-color: var(--border); border-top-color: var(--border); }
+.position-center { margin: 0 auto; width: 60%; }
+.notify-arrow { background: url("../images/top-arrow.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0); height: 10px; left: 16px; margin-top: 10px; opacity: 1; position: absolute; top: -20px; transition: all 0.25s ease 0s; width: 18px; z-index: 10; }
+
+/* ========= topright search box =========== */
+.search { background: url("/res/image/svg/Search.svg") no-repeat scroll 10px 8px var(--bg); background-size: 20px; border: 1px solid var(--bg1); border-radius: 100px; box-shadow: none; color: var(--fg2); padding: 0 5px 0 30px; transition: all 0.3s ease 0s; width: 160px; height: 36px;}
+    .search:focus { border: 1px solid var(--accent); box-shadow: none; color: var(--gray); font-weight: 300; transition: all 0.3s ease 0s; width: 360px; }
+.todo-search:focus { width: 100% !important; }
+/* ========= topright search box ends =========== */
+
+>>>>>>> Stashed changes
 .prog-row { border-bottom: 1px solid #3C3C44; display: inline-block; padding: 20px 0; width: 100%; }
     .prog-row .progress { margin-bottom: 0; }
     .prog-row h4 { color: var(--bg1); font-size: 12px; font-weight: 400; margin: 0; text-transform: uppercase; }
@@ -741,7 +996,11 @@ ul.top-menu { margin-right: 15px; margin-top: 0; }
 .state-overview .symbol i { color: var(--bg1); font-size: 50px; }
 .state-overview .symbol { border-radius: 4px 0 0 4px; padding: 25px 15px; width: 40%; }
 .state-overview .value { padding-top: 21px; width: 58%; }
+<<<<<<< Updated upstream
 .state-overview .terques { background: none repeat scroll 0 0 var(--cyan); }
+=======
+.state-overview .cyan { background: none repeat scroll 0 0 var(--cyan); }
+>>>>>>> Stashed changes
 .state-overview .red { background: none repeat scroll 0 0 var(--red); }
 .state-overview .yellow { background: none repeat scroll 0 0 var(--yellow); }
 .state-overview .blue { background: none repeat scroll 0 0 var(--blue); }
@@ -763,11 +1022,19 @@ ul.top-menu { margin-right: 15px; margin-top: 0; }
 #barchart { display: inline-block; margin-bottom: -15px; }
 .panel.green-chart .chart-tittle .value { color: #C0F080; float: right; }
 .panel.green-chart { background: none repeat scroll 0 0 #A9D96C; color: var(--bg1); }
+<<<<<<< Updated upstream
 .panel.terques-chart { background: none repeat scroll 0 0 #41CAC0; color: var(--bg1); }
     .panel.terques-chart .chart-tittle .value { color: var(--bg1); float: right; }
         .panel.terques-chart .chart-tittle .value a { color: var(--bg1); font-size: 12px; }
             .panel.terques-chart .chart-tittle .value a:hover, .panel.terques-chart .chart-tittle .value a.active { color: #55F2E7; font-size: 12px; }
     .panel.terques-chart .chart-tittle { background: none repeat scroll 0 0 #39B7AC; border-radius: 0 0 4px 4px; display: inline-block; font-size: 16px; font-weight: normal; padding: 15px; width: 100%; }
+=======
+.panel.cyan-chart { background: none repeat scroll 0 0 #41CAC0; color: var(--bg1); }
+    .panel.cyan-chart .chart-tittle .value { color: var(--bg1); float: right; }
+        .panel.cyan-chart .chart-tittle .value a { color: var(--bg1); font-size: 12px; }
+            .panel.cyan-chart .chart-tittle .value a:hover, .panel.cyan-chart .chart-tittle .value a.active { color: #55F2E7; font-size: 12px; }
+    .panel.cyan-chart .chart-tittle { background: none repeat scroll 0 0 #39B7AC; border-radius: 0 0 4px 4px; display: inline-block; font-size: 16px; font-weight: normal; padding: 15px; width: 100%; }
+>>>>>>> Stashed changes
 .inline-block { display: inline-block; }
 .gen-case { text-transform: none; }
 .task-thumb { float: left; width: 90px; }
@@ -888,10 +1155,17 @@ ul.ft-link { margin: 0; padding: 0; }
 .arrow-pro:after { border-width: 7px; content: ""; }
 .arrow-pro, .arrow-pro:after { border-color: rgba(0, 0, 0, 0); border-style: solid; display: block; height: 0; position: absolute; right: -5px; width: 0; }
 .post-highlight.yellow { background: none repeat scroll 0 0 #F8D347; border-radius: 0 4px 4px 0; }
+<<<<<<< Updated upstream
 .post-highlight.terques { background: none repeat scroll 0 0 #41CAC0; border-radius: 4px 0 0 4px; }
 .post-info h1 { color: #A19899; font-size: 18px; font-weight: 300; margin: 0; }
 .post-highlight.terques h2 { color: var(--bg1); font-size: 16px; font-style: italic; font-weight: 300; line-height: 22px; margin: 0; padding: 0 20px; }
     .post-highlight.terques h2 span, .post-highlight.terques h2 a { color: #92FAF3; }
+=======
+.post-highlight.cyan { background: none repeat scroll 0 0 #41CAC0; border-radius: 4px 0 0 4px; }
+.post-info h1 { color: #A19899; font-size: 18px; font-weight: 300; margin: 0; }
+.post-highlight.cyan h2 { color: var(--bg1); font-size: 16px; font-style: italic; font-weight: 300; line-height: 22px; margin: 0; padding: 0 20px; }
+    .post-highlight.cyan h2 span, .post-highlight.cyan h2 a { color: #92FAF3; }
+>>>>>>> Stashed changes
 .post-info h1 strong { color: #937B7B; text-transform: uppercase; }
 .post-info .desk { display: inline-block; }
     .post-info .desk h3 { font-size: 16px; }
@@ -906,9 +1180,15 @@ ul.ft-link { margin: 0; padding: 0; }
     .social-footer ul { margin: 0; padding: 0; text-align: center; }
         .social-footer ul li { display: inline-block; margin: 0 20px; }
             .social-footer ul li a { color: #CECED0; font-size: 25px; }
+<<<<<<< Updated upstream
                 .social-footer ul li a:hover i.fa-facebook, .social-footer ul li.active a i.fa-facebook { color: #486EAC; }
                 .social-footer ul li a:hover i.fa-twitter, .social-footer ul li.active a i.fa-twitter { color: #58C9F3; }
                 .social-footer ul li a:hover i.fa-google-plus, .social-footer ul li.active a i.fa-google-plus { color: #4A4A4A; }
+=======
+                .social-footer ul li a:hover i.mdi-facebook, .social-footer ul li.active a i.mdi-facebook { color: #486EAC; }
+                .social-footer ul li a:hover i.mdi-twitter, .social-footer ul li.active a i.mdi-twitter { color: #58C9F3; }
+                .social-footer ul li a:hover i.fa-google-plus, .social-footer ul li.active a i.mdi-google-plus { color: #4A4A4A; }
+>>>>>>> Stashed changes
                 .social-footer ul li a:hover i.fa-pinterest, .social-footer ul li.active a i.fa-pinterest { color: #D1282D; }
 .pie-foot { background: none repeat scroll 0 0 #6B6B6B; border-radius: 0 0 4px 4px; color: var(--bg1); font-size: 16px; font-weight: 300; padding: 18px 15px; text-align: center; }
 .follower { background: none repeat scroll 0 0 #01A89E; border-radius: 4px 4px 0 0; color: var(--bg1); text-align: center; }
@@ -981,9 +1261,15 @@ ul.labels-info li { margin: 0; }
         .table-inbox tr td:first-child { width: 5%; }
             .table-inbox tr td:first-child .icheckbox_minimal { margin-left: 15px; }
         .table-inbox tr td:hover { cursor: pointer; }
+<<<<<<< Updated upstream
         .table-inbox tr td .fa-star.inbox-started, .table-inbox tr td .fa-star:hover { color: #F78A09; }
         .table-inbox tr td .fa-star { color: #D5D5D5; }
     .table-inbox tr.unread td { background: none repeat scroll 0 0 #F7F7F7; font-weight: 600; }
+=======
+        .table-inbox tr td .mdi-star.inbox-started, .table-inbox tr td .mdi-star:hover { color: var(--orange); }
+        .table-inbox tr td .mdi-star { color: var(--fg); }
+    .table-inbox tr.unread td { background: none repeat scroll 0 0 var(--fg); font-weight: 600; }
+>>>>>>> Stashed changes
     .table-inbox tr.unread a { color: rgba(var(--rgb-accent), 0.05); }
     .table-inbox tr a { color: #767676; }
 ul.inbox-pagination { float: right; }
@@ -1081,7 +1367,11 @@ ul.inbox-pagination { float: right; }
 .recent-act { border-collapse: collapse; border-spacing: 0; display: table; position: relative; table-layout: fixed; width: 100%; }
     .recent-act:before { background-color: var(--bg1); bottom: 0; content: ""; left: 50%; position: absolute; top: 50px; width: 2px; z-index: 0; }
     .recent-act h1 { color: var(--accent); font-size: 16px; font-weight: bold; text-align: center; text-transform: uppercase; }
+<<<<<<< Updated upstream
 .activity-icon.terques { background: none repeat scroll 0 0 #8FD6D6; }
+=======
+.activity-icon.cyan { background: none repeat scroll 0 0 #8FD6D6; }
+>>>>>>> Stashed changes
 .activity-icon.red { background: none repeat scroll 0 0 var(--red); }
 .activity-icon.purple { background: none repeat scroll 0 0 var(--purple); }
 .activity-icon.green { background: none repeat scroll 0 0 var(--green); }
@@ -1090,7 +1380,11 @@ ul.inbox-pagination { float: right; }
 .activity-icon { background: none repeat scroll 0 0 #C7CBD6; }
 .activity-desk { background: none repeat scroll 0 0 #F2F2F2; border-radius: 5px; padding: 15px 30px; position: relative; text-align: center; }
     .activity-desk h2 { color: var(--accent); font-size: 14px; font-weight: bold; margin: 0 0 10px; text-transform: uppercase; }
+<<<<<<< Updated upstream
     .activity-desk .terques { color: var(--accent); }
+=======
+    .activity-desk .cyan { color: var(--accent); }
+>>>>>>> Stashed changes
     .activity-desk .red { color: var(--red); }
     .activity-desk .purple { color: var(--purple); }
     .activity-desk .green { color: var(--green); }
@@ -1170,8 +1464,11 @@ ul.amounts li { background: none repeat scroll 0 0 #F5F6F9; border-radius: 4px; 
 #external-events p input[type="checkbox"] { margin: 0; }
 .drg-event-title { border-bottom: 1px solid var(--line); font-weight: 300; margin-bottom: 15px; margin-top: 0; padding-bottom: 10px; }
 .fc-content .fc-event { border-radius: 4px; padding: 4px 6px; }
+<<<<<<< Updated upstream
 .fc-corner-left { }
 .fc-corner-right { }
+=======
+>>>>>>> Stashed changes
 .drp-rmv { margin-top: 10px; padding-top: 10px; }
 .btn-row { margin-bottom: 10px; }
 .tab-head { background: none repeat scroll 0 0 #7087A3; display: inline-block; margin-top: 60px; width: 100%; }
@@ -1202,7 +1499,11 @@ ul.amounts li { background: none repeat scroll 0 0 #F5F6F9; border-radius: 4px; 
 .carousel-control { color: var(--gray); text-shadow: none; width: 45px; }
     .carousel-control i { display: inline-block; height: 25px; left: 50%; margin-left: -10px; margin-top: -10px; position: absolute; top: 50%; width: 20px; z-index: 5; }
     .carousel-control.left, .carousel-control.right { background: none repeat scroll 0 0 rgba(0, 0, 0, 0); filter: none; margin-bottom: 0; }
+<<<<<<< Updated upstream
     .carousel-control:hover, .carousel-control:focus { color: var(--border); opacity: 0.9; text-decoration: none; }
+=======
+    .carousel-control:hover, .carousel-control:focus { color: var(--blue); opacity: 0.9; }
+>>>>>>> Stashed changes
 .carousel-inner h3 { font-size: 16px; font-weight: 300; margin: 0; }
 .carousel-inner { margin-bottom: 15px; }
 .gritter-close { left: auto !important; right: 3px !important; }
@@ -1239,7 +1540,11 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
 .cke_chrome { display: block; padding: 0; }
 .user-heading.alt { display: inline-block; text-align: left; width: 100%; }
 .alt.gray-bg { background: none repeat scroll 0 0 #474751; }
+<<<<<<< Updated upstream
 .terques-bg { background: none repeat scroll 0 0 var(--accent); }
+=======
+.cyan-bg { background: none repeat scroll 0 0 var(--accent); }
+>>>>>>> Stashed changes
 .profile-nav.alt.green-border ul > li > a:hover i { color: var(--accent); }
 .user-heading.alt a { border: 5px solid rgba(255, 255, 255, 0.3); border-radius: 50%; display: inline-block; float: left; margin-left: -10px; margin-right: 15px; }
     .user-heading.alt a img { border-radius: 50%; height: 85px; width: 85px; }
@@ -1314,7 +1619,11 @@ ul.clock-category { padding: 15px 0; }
 .prd-row h1 { color: #5F6165; font-size: 24px; font-weight: 400; margin: 5px 0; }
 .prd-row p { color: #BFC2C4; margin: 0; }
     .prd-row p.normal { color: #BFC2C4; }
+<<<<<<< Updated upstream
     .prd-row p.terques { color: var(--accent); }
+=======
+    .prd-row p.cyan { color: var(--accent); }
+>>>>>>> Stashed changes
 .prd-row .price { margin-bottom: 20px; margin-top: 20px; }
     .prd-row .price .amnt { color: var(--accent); font-size: 25px; font-weight: 600; }
         .prd-row .price .amnt:after { content: ".00"; font-size: 12px; position: relative; top: -10px; }
@@ -1354,12 +1663,15 @@ span.customSelect { background-color: var(--bg1); border: 1px solid #EAEAEA; bor
 .msg-time-chat { overflow: hidden; padding: 8px 0; }
 .msg-in a, .msg-in a:hover { border-radius: 4px; color: #B64C4C; font-size: 13px; font-weight: 400; margin-right: 10px; text-decoration: none; }
 .msg-out a, .msg-out a:hover { border-radius: 4px; color: #288F98; font-size: 13px; font-weight: 400; margin-right: 10px; text-decoration: none; }
+<<<<<<< Updated upstream
 .bg-terques { background: none repeat scroll 0 0 #8FD6D6 !important; }
 .bg-red { background: none repeat scroll 0 0 #FFA991 !important; }
 .bg-purple { background: none repeat scroll 0 0 var(--purple) !important; }
 .bg-green { background: none repeat scroll 0 0 var(--green) !important; }
 .bg-yellow { background: none repeat scroll 0 0 var(--yellow) !important; }
 .bg-blue { background: none repeat scroll 0 0 #99CCE3 !important; }
+=======
+>>>>>>> Stashed changes
 .boxed-page { background-color: #000000 !important; }
 .box-head { background: none repeat scroll 0 0 rgba(0, 0, 0, 0); }
 .boxed-page .container { background: none repeat scroll 0 0 rgba(var(--rgb-accent), 0.05); padding-left: 0; padding-right: 0; }
@@ -1378,8 +1690,13 @@ span.customSelect { background-color: var(--bg1); border: 1px solid #EAEAEA; bor
 .rating { direction: rtl; font-size: 30px; unicode-bidi: bidi-override; }
     .rating span.star, .rating span.star { display: inline-block; font-family: "Material Design Icons"; font-style: normal; font-weight: normal; }
         .rating span.star:hover, .rating span.star:hover { cursor: pointer; }
+<<<<<<< Updated upstream
         .rating span.star:before, .rating span.star:before { color: var(--gray); content: "\F04D2"; padding-right: 5px; }
         .rating span.star:hover:before, .rating span.star:hover:before, .rating span.star:hover ~ span.star:before, .rating span.star:hover ~ span.star:before { color: var(--yellow); content: "\F04CE"; }
+=======
+        .rating span.star:before, .rating span.star:before { color: var(--gray); content: var(--mdi-star-outline); padding-right: 5px; }
+        .rating span.star:hover:before, .rating span.star:hover:before, .rating span.star:hover ~ span.star:before, .rating span.star:hover ~ span.star:before { color: var(--yellow); content: var(--mdi-star); }
+>>>>>>> Stashed changes
 #editor-container { margin: 10px auto 0; width: 100%; }
 #header-editor { border-bottom: 1px solid #EAEAEA; overflow: hidden; padding: 0 0 30px; position: relative; }
 #headerLeft, #headerRight { overflow: hidden; width: 100%; }
@@ -1470,6 +1787,7 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
 .go-top { background: none repeat scroll 0 0 rgba(0, 0, 0, 0.4); border-radius: 2%; float: right; height: 25px; margin-right: 1%; width: 25px; }
     .go-top i { color: var(--bg1); font-size: 18px; padding-top: 2px; }
 .site-min-height { min-height: 900px; }
+<<<<<<< Updated upstream
 .price-head { padding: 10px 0 50px; }
     .price-head h1 { color: var(--accent); font-size: 32px; font-weight: normal; }
 .pricing-table { background: none repeat scroll 0 0 var(--bg); border-radius: 5px; padding: 0 0 25px; text-align: center; }
@@ -1494,6 +1812,8 @@ tr.odd.gradeX td.sorting_1, tr.even.gradeX td.sorting_1, table.display tr.even.g
     .pricing-quotation p, .team-info p { margin-bottom: 0; }
 .pricing-plan, .team-info-wrap { position: relative; }
 .pricing-quotation:before, .team-info:before { background-color: var(--bg1); border-color: var(--bg1); border-image: none; border-right: 1px none var(--bg1); border-style: none; content: ""; display: block; height: 14px; left: 48%; position: absolute; top: -7px; transform: rotate(45deg); width: 15px; }
+=======
+>>>>>>> Stashed changes
 .sortable .panel .panel-heading { cursor: move; }
 .has-switch span.switch-left, .has-switch span.switch-right { border-radius: 36px; }
 .toggle-heading h3 { font-size: 16px; font-weight: 300; margin: 0 0 10px; padding-bottom: 10px; }
@@ -1566,6 +1886,7 @@ div.tagsinput span.tag { background: none repeat scroll 0 0 #CDE69C !important; 
 .notification-info { margin-left: 56px; margin-top: -36px; }
 .notification-meta { margin-bottom: 3px; }
 .notification-info p { color: var(--gray); font-size: 12px; margin: 0; }
+<<<<<<< Updated upstream
 .alert-info .alert-icon { background-color: #99CCE3; }
 .alert-danger .alert-icon { background-color: #FCB1AE; }
 .alert-success .alert-icon { background-color: #98D7AD; }
@@ -1580,6 +1901,22 @@ div.tagsinput span.tag { background: none repeat scroll 0 0 #CDE69C !important; 
 .alert-danger.bucket-notification { background-color: #FEF3F2; }
 .alert-success.bucket-notification { background-color: #EEF8F8; }
 .alert-warning.bucket-notification { background-color: var(--bg1)7E1; }
+=======
+.alert-info .alert-icon { background-color: var(--blue); }
+.alert-danger .alert-icon { background-color: var(--red); }
+.alert-success .alert-icon { background-color: var(--green); }
+.alert-warning .alert-icon { background-color: var(--orange); }
+.notification-sender { color: #414147; }
+.notification-time { color: var(--gray); font-style: italic; }
+.alert-info .notification-info a { color: var(--blue); }
+.alert-danger .notification-info a { color: var(--red); }
+.alert-success .notification-info a { color: var(--green); }
+.alert-warning .notification-info a { color: var(--orange); }
+.alert-info.bucket-notification { background-color: rgba(var(--rgb-blue), 0.2); }
+.alert-danger.bucket-notification { background-color: rgba(var(--rgb-red), 0.2); }
+.alert-success.bucket-notification { background-color: rgba(var(--rgb-green), 0.2); }
+.alert-warning.bucket-notification { background-color: rgba(var(--rgb-orange), 0.2); }
+>>>>>>> Stashed changes
 .conversation-list li { margin-bottom: 24px; }
 .conversation-list .chat-avatar { display: inline-block; float: left; text-align: center; width: 36px; }
     .conversation-list .chat-avatar i { font-size: 12px; font-style: normal; }
@@ -1616,11 +1953,14 @@ div.tagsinput span.tag { background: none repeat scroll 0 0 #CDE69C !important; 
 .mini-stat-icon { background: none repeat scroll 0 0 var(--bg1); border-radius: 100%; color: var(--bg1); display: inline-block; float: left; font-size: 30px; height: 60px; line-height: 60px; margin-right: 10px; text-align: center; width: 60px; }
 .mini-stat-info { font-size: 12px; padding-top: 2px; }
     .mini-stat-info span { display: block; font-size: 24px; font-weight: 600; }
+<<<<<<< Updated upstream
 .orange { background: none repeat scroll 0 0 #FA8564 !important; }
 .tar { background: none repeat scroll 0 0 #1FB5AC !important; }
 .mini-stat .green { background: none repeat scroll 0 0 var(--green) !important; }
 .pink { background: none repeat scroll 0 0 #A48AD4 !important; }
 .yellow-b { background: none repeat scroll 0 0 #FDD752 !important; }
+=======
+>>>>>>> Stashed changes
 .weather-widget { background: none repeat scroll 0 0 var(--bg1); border-radius: 3px; margin-bottom: 20px; padding: 12px 15px; }
 .weather-info { margin: 0; }
     .weather-info li { color: var(--border); font-size: 14px; }
@@ -1712,7 +2052,11 @@ div.tagsinput span.tag { background: none repeat scroll 0 0 #CDE69C !important; 
 .text-purple { color: var(--purple); }
 .text-green { color: var(--green); }
 
+<<<<<<< Updated upstream
 /* sidebars open/close/suspend/restore/delete */
+=======
+/* ========= sidebars open/close/suspend/restore/delete ========= */
+>>>>>>> Stashed changes
 ul.sidebar-menu li i { margin-left: -10px; margin-right: 5px; }
     ul.sidebar-menu li i.icon-cancel-2 { font-size: 13px; margin-right: 8px; }
 ul.sidebar-menu li a.active, ul.sidebar-menu li a:focus, ul.sidebar-menu li a.active i,  ul.sidebar-menu li a:focus i { background: transparent; color: var(--fg); }
@@ -1727,6 +2071,7 @@ ul.sidebar-menu li.disabled a.active, ul.sidebar-menu li.disabled a:hover, ul.si
 ul.sidebar-menu li sup { vertical-align: top; position: relative; top: 0.2em; }
 #main-content .wrapper { padding: 0 15px; }
 .tooltip-inner { text-transform: none; font-size: 11px; }
+<<<<<<< Updated upstream
 
 /* topright icons: information and total reset button */
 .notify-row i:before { margin: 0; line-height: 1; }
@@ -1746,6 +2091,38 @@ ul.sidebar-menu li sup { vertical-align: top; position: relative; top: 0.2em; }
 .panel .mdi::before { font-size:16px; }
 .panel-group .panel-heading+.panel-collapse .panel-body 
 { border-top: 1px solid var(--border); }
+=======
+/* ========= sidebars ends ========= */
+
+/* ========= topright icons: information and total reset button ========= */
+.notify-row i:before { margin: 0; line-height: 1; }
+.notify-row .dropdown-toggle:hover i:before, .notify-row .dropdown-toggle:focus i:before { color: var(--bg1); }
+.headerToggleCircle { background: none repeat scroll 0 0 var(--bg); border-radius: 50%; float: left; height: 36px; width: 36px; cursor: pointer; text-align: center; }
+.headerToggleCircle:hover { background: none repeat scroll 0 0 var(--accent); color: var(--bg1); }
+    .headerToggleCircle#factoryReset .mdi-restore-alert { padding: 1px 2px 0 0; }
+    .headerToggleCircle#themeSwitch .mdi-theme-light-dark { padding-top: 1.5px; }
+/* ========= topright icons ends ========= */
+
+
+
+/* panel view, affect both bottomleft tips and information popup page */
+    .panel {background-color: transparent; border: none;}
+        .panel .mdi::before 
+        { font-size:16px; }
+        .panel .panel-heading 
+        { background-color: rgba(var(--rgb-accent), 0.5); color: var(--fg); border-bottom: var(--border); padding: 15px; text-transform: uppercase; }
+            .panel .panel-heading p 
+            { color: var(--fg); }
+            .panel .panel-heading .penal-title 
+            { margin: 0; }
+            .panel .panel-heading .panel-title .mdi::before 
+            { font-size:16px; margin-right: 4px; }
+        .panel .panel-body 
+        { background-color: rgba(var(--bg), 0.5); border-top: 1px solid var(--border); border-top: none; }
+        .panel-group .panel-heading+.panel-collapse .panel-body 
+        { border-top: 1px solid var(--border); }
+/* panel view ends */
+>>>>>>> Stashed changes
 
 
 .leftside-navigation .sidebar-menu li:last-of-type { margin-bottom: 47px; }
@@ -1760,6 +2137,7 @@ path.top-status-svg {
     fill: var(--fg1);
 }
 
+<<<<<<< Updated upstream
 th { text-align: center; }
 .table-centered { text-align: center; }
 .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td
@@ -1783,3 +2161,31 @@ kbd { color: var(--fg); box-shadow: var(--border) ; text-shadow: 1px solid var(-
 
 /* hide the scrollbar */
 ::-webkit-scrollbar {display:none}
+=======
+/* ========= information popup table look ========= */
+th { text-align: center; }
+.table
+{ background-color: rgba(var(--rgb-fg), 0.03); border-color: var(--border); }
+    .table>thead>tr>th,.table>tbody>tr>th,.table>tfoot>tr>th,.table>thead>tr>td,.table>tbody>tr>td,.table>tfoot>tr>td
+    { border-top-width: 1px; border-color: var(--border); }
+    .table>thead>tr>th
+    { border-bottom-width: 2px; border-color: var(--border); }
+    .table>tbody+tbody
+    { border-top-width: 2px; border-color: var(--border); }
+.table-centered { text-align: center; border-color: var(--border); }
+.table-bordered
+    { border-width: 1px; border-color: var(--border); }
+    .table-bordered>thead>tr>th,.table-bordered>tbody>tr>th,.table-bordered>tfoot>tr>th,.table-bordered>thead>tr>td,.table-bordered>tbody>tr>td,.table-bordered>tfoot>tr>td
+    { border-width: 1px; border-color: var(--border); }
+.table-striped>tbody>tr:nth-child(odd)>td,.table-striped>tbody>tr:nth-child(odd)>th
+{ background-color: rgba(var(--rgb-fg), 0.03) }
+.table-hover>tbody>tr:hover>td,.table-hover>tbody>tr:hover>th
+{ background-color: rgba(var(--rgb-fg), 0.03) }
+/* ========= information popup table look ========= */
+
+
+kbd { color: var(--fg); box-shadow: 1px 1px var(--border), 0px -2px var(--bg0), -1px -3px var(--bg) ; background-color: var(--bg0); }
+
+/* hide the scrollbar */
+::-webkit-scrollbar { display:none }
+>>>>>>> Stashed changes
