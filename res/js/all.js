@@ -34004,5 +34004,7 @@ _gaq.push(["_trackPageview"]);
     var t = document.getElementsByTagName("script")[0];
     t.parentNode.insertBefore(e, t)
 })();
-
-$("html").attr("data-theme","dark");
+if (window.matchMedia('(prefers-color-scheme: light)').matches)
+    $("html").attr("data-theme","light");
+else
+	$("html").attr("data-theme","dark");

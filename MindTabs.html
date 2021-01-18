@@ -6,7 +6,7 @@
 	<link href="/res/image/logo/MindTabs.ico" rel="shortcut icon" type="image/x-icon" />
 
 	<!--Libraries-->
-	<link rel="stylesheet" type="text/css" href="/res/css/pigeon.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/theme.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/jquery.contextMenu.min.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/jquery-ui.min.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/jquery-ui.structure.min.css" />
@@ -27,26 +27,26 @@
 		<header class="header fixed-top clearfix">
 			<div class="brand">
 				<a class="logo" href="/MindTabs.html">MindTabs</a>
-				<div class="sidebar-toggle-box btn-clickable">
+				<div class="sidebar-toggle-box btn-shadowed rounded">
 					<div class="mdi mdi-menu"></div>
 				</div>
 			</div>
 			<div class="top-nav clearfix">
 				<ul class="top-menu pull-left notify-row">
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle tooltips btn-non-clickable" data-placement="bottom" title="Windows opened">
+						<a href="#" class="dropdown-toggle tooltips btn-shadowed disabled rounded" data-placement="bottom" title="Windows opened">
 							<div class="mdi mdi-aspect-ratio"></div>
 							<span class="badge bg-success"></span>
 						</a>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle tooltips btn-non-clickable" data-placement="bottom" title="Tabs opened">
+						<a href="#" class="dropdown-toggle tooltips btn-shadowed disabled rounded" data-placement="bottom" title="Tabs opened">
 							<div class="mdi mdi-tab"></div>
 							<span class="badge bg-info"></span>
 						</a>
 					</li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle tooltips btn-non-clickable" data-placement="bottom" title="Tabs suspended">
+						<a href="#" class="dropdown-toggle tooltips btn-shadowed disabled rounded" data-placement="bottom" title="Tabs suspended">
 							<div class="mdi mdi-tab-unselected"></div>
 							<span class="badge bg-warning"></span>
 						</a>
@@ -54,21 +54,21 @@
 				</ul>
 				<ul class="nav pull-right top-menu">
 					<li>
-						<input type="text" placeholder="&#xF0349 Search Tabs by URL or Title" class="form-control search searchControl mdi mdi-magnify" />
+						<input type="text" placeholder="&#xF0349 Search Tabs by URL or Title" class="form-control search searchControl shadowed" />
 					</li>
 					<li>
-						<div id="themeSwitch" class="headerToggleCircle tooltips btn-clickable" data-placement="bottom" title="Switch Light/Dark Theme" data-container="body" >
+						<div id="themeSwitch" class="headerToggleCircle tooltips btn-shadowed rounded" data-placement="bottom" title="Switch Light/Dark Theme" data-container="body" >
 							<div class="mdi mdi-theme-light-dark"></div>
 						</div>
 					</li>
 					<li>
-						<div class="headerToggleCircle tooltips btn-clickable" data-placement="bottom" title="About MindTabs" data-container="body" data-toggle="modal" data-target="#modalInfo">
+						<div class="headerToggleCircle tooltips btn-shadowed rounded" data-placement="bottom" title="About MindTabs" data-container="body" data-toggle="modal" data-target="#modalInfo">
 							<div class="mdi mdi-information-variant"></div>
 						</div>
 					</li>
 					<li>
-						<div id="factoryReset" class="headerToggleCircle tooltips btn-clickable" data-placement="bottom" title="Total Reset. Warning: Erasing All Data" data-container="body">
-							<div class="mdi mdi-restore-alert"></div>
+						<div id="factoryReset" class="headerToggleCircle tooltips btn-shadowed rounded" data-placement="bottom" title="Total Reset. Warning: Erasing All Data" data-container="body">
+							<div class="mdi mdi-cog-refresh"></div>
 						</div>
 					</li>
 				</ul>
@@ -110,7 +110,7 @@
 					</ul>
 					<div class="aboutWrapper">
 						<a href="http://github.com/Moenupa" class="fg-purple">by Moenupa</a><br />
-						<small>BETA v0.1.1</small>
+						<small>BETA v0.1.2</small>
 					</div>
 
 				</div>
@@ -128,8 +128,8 @@
 				<div class="row">
 					<div id="tree-container" class="treeWrapper">
 						<section class="toolTipWrapper panel" style="display: none;">
-							<header class="toolTip-header panel-heading">
-								<span class="mdi mdi-information-variant" ></span>
+							<header class="toolTip-header panel-heading shadowed">
+								<span class="mdi mdi-tooltip-text-outline" ></span>
 								<span class="panel-title">Tips</span>
 								<span class="tools pull-right">
 									<a href="#" class="mdi mdi-arrow-expand-up tooltips panel-toggler" data-placement="top" title="SHOW / HIDE"></a>
@@ -259,7 +259,7 @@
 					<p style="font-size: larger;">Learn more about key features:</p>
 					<div class="panel-group" id="accordion">
 						<div class="panel">
-							<div class="panel-heading">
+							<div class="panel-heading shadowed">
 								<div class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseActions" title="Learn more about key actions" id="a4">
 										<div class="mdi mdi-check-all">Actions</div>
@@ -320,7 +320,7 @@
 							</div>
 						</div>
 						<div class="panel">
-							<div class="panel-heading">
+							<div class="panel-heading shadowed">
 								<div class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSearch" title="Learn more about search" id="a5">
 										<div class="mdi mdi-magnify">Searching</div>
@@ -339,7 +339,7 @@
 							</div>
 						</div>
 						<div class="panel">
-							<div class="panel-heading">
+							<div class="panel-heading shadowed">
 								<div class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTabs" title="Learn more about Tabs, groups & windows" id="a6">
 										<div class="mdi mdi-share-variant">Tabs, groups, windows</div>
@@ -369,7 +369,7 @@
 							</div>
 						</div>
 						<div class="panel">
-							<div class="panel-heading">
+							<div class="panel-heading shadowed">
 								<div class="panel-title">
 									<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseHotKeys" title="Learn more about hotkeys for quick access" id="a7">
 										<div class="mdi mdi-keyboard-variant">Hotkeys</div>
@@ -420,7 +420,7 @@
 				</div>
 				<div class="modal-footer">
 					<a href="https://github.com/Moenupa" target="_blank" class="fg-purple">by Moenupa</a><br />
-					<small>BETA v0.1.1</small>
+					<small>BETA v0.1.2</small>
 				</div>
 			</div>
 		</div>
@@ -434,7 +434,7 @@
 				</div>
 				<div class="modal-body">
 					<div style="text-align:center;margin-bottom:20px;">
-						<img src="res/image/icon/diamond.png" style="float: none" />
+						<img src="res/image/logo/MindTabs128.png" style="float: none" />
 						<h4>Please read this tips before you start<br />
 							& become a PRO just in a minute!</h4>
 					</div>
@@ -459,7 +459,7 @@
 				</div>
 				<div class="modal-footer">
 					<a href="https://github.com/Moenupa" target="_blank" class="fg-purple">by Moenupa</a><br />
-					<small>BETA v0.1.1</small>
+					<small>BETA v0.1.2</small>
 				</div>
 			</div>
 		</div>

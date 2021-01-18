@@ -1,3 +1,5 @@
+/* Pigeon theme */
+
 :root[data-theme="light"] { /* light theme */
     --bg: #fff;
     --fg: #1E1E1E;
