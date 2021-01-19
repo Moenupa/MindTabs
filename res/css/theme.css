@@ -1,87 +1,68 @@
-/* Pigeon theme */
+/** 
+ * Pigeon Theme, https://github.com/Moenupa/Pigeon
+ * --> Grayscale hierarchy from light to dark
+ * main : white* < fg* < gray* < bg* < black*
+ * white: white* < fg0 < fg* < fg1 < fg2 < gray*
+ * black: gray* < bg2 < bg1 < bg* < bg0 < black*
+ * whole: white* <= fg0 < fg* < fg1 < fg2 < gray* < bg2 < bg1 < bg* < bg0 <= black*
+ * dark : white* < fg0 < fg* < fg1 < fg2 < gray* < bg2 < bg1 < bg* < bg0 < black*
+ * light: white* = fg0 < fg* < fg1 < fg2 < gray* < bg2 < bg1 < bg* < bg0 = black*
+ * --> color variants
+ * format: --color: #RGB; --color-rgb: R,G,B; --dark-color: #RGB; --bright-color: #RGB; 
+ * tips:   color in hex ;   color in rgb    ;    faded color    ;   brightened color  ;
+ * hints:   main color  ;                   ;   less visible    ;     more visible    ;
+ * usage:    var(--c)   ; rgba(var(--c),.5) ;    background     ;      foreground     ;
+ */
 
 :root[data-theme="light"] { /* light theme */
-    --bg: #fff;
-    --fg: #1E1E1E;
-    --border: #ccc;
-    --line: #eee;
-    --fg0: #000;
-    --fg1: #333;
-    --fg2: #666;
-    --gray: #999;
-    --bg2: #ccc;
-    --bg1: #eee;
-    --bg0: #f5f5f5;
-    
-    --red: #E64B43;
-    --orange: #E68F17;
-    --yellow: #E6BC17;
-    --green: #3EAD5A;
-    --cyan: #67BAE0;
-    --blue: #177BE6;
-    --purple: #AF52DE;
-    --pink: #E6405F;
-    --white: #FFFFFF;
-    --black: #1E1E1E;
+    --bg    : #F5F5F5; --rgb-bg    : 245,245,245;
+    --fg    : #1E1E1E; --rgb-fg    :  30, 30, 30;
+    --border: #CCCCCC;
+    --line  : #EEEEEE;
+    --black : #000000; --rgb-black :   0,  0,  0;
+    --fg0   : #000000; --rgb-fg0   :   0,  0,  0;
+    --fg1   : #333333; --rgb-fg1   :  51, 51, 51;
+    --fg2   : #666666; --rgb-fg2   : 102,102,102;
+    --bg2   : #CCCCCC; --rgb-bg2   : 204,204,204;
+    --bg1   : #EEEEEE; --rgb-bg1   : 238,238,238;
+    --bg0   : #FFFFFF; --rgb-bg0   : 255,255,255;
+    --white : #FFFFFF; --rgb-white : 255,255,255;
 
-    --rgb-bg: 255,255,255;
-    --rgb-fg: 30,30,30;
-    --rgb-bg1: 238,238,238;
-    --rgb-bg2: 204,204,204;
-    --rgb-gray: 153,153,153;
-    --rgb-fg1: 51,51,51;
-    --rgb-red: 230,75,67;
-    --rgb-yellow: 230,188,23;
-    --rgb-orange: 230,143,23;
-    --rgb-green: 62,173,90;
-    --rgb-cyan: 103,186,224;
-    --rgb-blue: 23,123,230;
-    --rgb-purple: 162,92,196;
-    --rgb-pink: 230,64,95;
+    --red   : #E64B43; --rgb-red   : 230, 75, 67; --dark-red   : #F2A5A1; --bright-red   : #FF3B30;
+    --orange: #E68F17; --rgb-orange: 230,143, 23; --dark-orange: #F2DD8B; --bright-orange: #FF9500;
+    --yellow: #E6BC17; --rgb-yellow: 230,188, 23; --dark-yellow: #F2C78B; --bright-yellow: #FFCC00;
+    --green : #3EAD5A; --rgb-green :  62,173, 90; --dark-green : #9ED6AC; --bright-green : #34C759;
+    --cyan  : #67BAE0; --rgb-cyan  : 103,186,224; --dark-cyan  : #B3DCEF; --bright-cyan  : #5AC8FA;
+    --blue  : #177BE6; --rgb-blue  :  23,123,230; --dark-blue  : #8BBDF2; --bright-blue  : #007AFF;
+    --purple: #A25CC4; --rgb-purple: 162, 92,196; --dark-purple: #D0ADE1; --bright-purple: #AF52DE;
+    --pink  : #E6405F; --rgb-pink  : 230, 64, 95; --dark-pink  : #F29FAF; --bright-pink  : #FF2D55;
 
-    --accent:var(--cyan);
-    --rgb-accent:var(--rgb-cyan);
+    --accent: var(--blue); --rgb-accent: var(--rgb-blue);
 }
 
 :root[data-theme="dark"] { /* dark theme */
-    --bg: #1E1E1E;
-    --fg: #D4D4D4;
+    --bg    : #1E1E1E; --rgb-bg    :  30, 30, 30;
+    --fg    : #D4D4D4; --rgb-fg    : 212,212,212;
     --border: #3E3E3E;
-    --line: #2E2E2E;
-    --fg0: #eee;
-    --fg1: #CCC;
-    --fg2: #A6A6A6;
-    --gray: #999;
-    --bg2: #666;
-    --bg1: #333;
-    --bg0: #2E2E2E;
+    --line  : #2E2E2E;
+    --white : #FFFFFF; --rgb-white : 255,255,255;
+    --fg0   : #EEEEEE; --rgb-fg0   : 238,238,238;
+    --fg1   : #CCCCCC; --rgb-fg1   : 204,204,204;
+    --fg2   : #A6A6A6; --rgb-fg2   : 166,166,166;
+    --gray  : #999999; --rgb-gray  : 153,153,153;
+    --bg2   : #666666; --rgb-bg2   : 102,102,102;
+    --bg1   : #333333; --rgb-bg1   :  51, 51, 51;
+    --bg0   : #2E2E2E; --rgb-bg1   :  46, 46, 46;
+    --black : #000000; --rgb-black :   0,  0,  0;
 
-    --red: #CC6666;
-    --orange: #CC8F66;
-    --yellow: #CCB866;
-    --green: #8FCC66;
-    --cyan: #66CCA3;
-    --blue: #66A3CC;
-    --purple: #B866CC;
-    --pink: #CC66A3;
-    --white: #EFEFEF;
-    --black: #1E1E1E;
+    --red   : #CC6666; --rgb-red   : 204,102,102; --dark-red   : #754242; --bright-red   : #FF8080;
+    --orange: #CC8F66; --rgb-orange: 204,143,102; --dark-orange: #755642; --bright-orange: #FFB280;
+    --yellow: #CCB866; --rgb-yellow: 204,184,102; --dark-yellow: #756B42; --bright-yellow: #FFE680;
+    --green : #8FCC66; --rgb-green : 143,204,102; --dark-green : #567542; --bright-green : #B2FF80;
+    --cyan  : #66CCA3; --rgb-cyan  : 102,204,163; --dark-cyan  : #427560; --bright-cyan  : #80FFCC;
+    --blue  : #66A3CC; --rgb-blue  : 102,163,204; --dark-blue  : #426075; --bright-blue  : #80CCFF;
+    --purple: #B866CC; --rgb-purple: 184,102,204; --dark-purple: #6B4275; --bright-purple: #E680FF;
+    --pink  : #CC66A3; --rgb-pink  : 204,102,163; --dark-pink  : #754260; --bright-pink  : #FF80CC;
 
-    --rgb-bg: 30,30,30;
-    --rgb-fg: 212,212,212;
-    --rgb-bg1: 51,51,51;
-    --rgb-bg2: 102,102,102;
-    --rgb-gray: 153,153,153;
-    --rgb-fg1: 204,204,204;
-    --rgb-red: 204,102,102;
-    --rgb-yellow: 204,184,102;
-    --rgb-orange: 204,143,102;
-    --rgb-green: 143,204,102;
-    --rgb-cyan: 102,204,163;
-    --rgb-blue: 102,163,204;
-    --rgb-purple: 184,102,204;
-    --rgb-pink: 204,102,163;
-
-    --accent:var(--blue);
-	--rgb-accent:var(--rgb-blue);
+    --accent: var(--blue); --rgb-accent: var(--rgb-blue);
 }

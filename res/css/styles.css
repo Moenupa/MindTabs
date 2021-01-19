@@ -167,12 +167,13 @@
 .mindTabsModal .modal-dialog#welcome #start:hover, .mindTabsModal .modal-dialog#welcome #start:active { background-color: rgba(var(--rgb-blue),.8); color: var(--fg); }
 
 /*==================== bottomright:controller and zoom setter */
-.controllerWrapper { position:fixed; right:0; bottom:0; border-right:none; background-color:var(--bg1); border-top-left-radius:3px; padding:10px; box-shadow:none;}
-.controllerWrapper:hover { box-shadow:2px 2px  rgba(0,0,0,.5); }
-	.controllerWrapper td { text-align:center; vertical-align:middle; color:var(--fg); width:var(--content-size); height:var(--content-size); line-height:1; }
-	.controllerWrapper tr { height:var(--content-size); font-size:var(--content-size); }
-	.controller { color:var(--fg); cursor:pointer; border-radius: 3px;}
+.controllerWrapper { position:fixed; right:0; bottom:0; border-right:none; background-color:var(--bg1); border-top-left-radius:3px; padding:10px; box-shadow:none; color:var(--fg2); }
+	.controllerWrapper tr, .controllerWrapper td, .controller { color:inherit; }
+	.controllerWrapper tr { height:var(--content-size); }
+	.controllerWrapper td { text-align:center; width:var(--content-size); line-height:1;  }
+	.controller { font-size:var(--content-size); cursor:pointer; border-radius: 3px;}
 	.controller:hover { color:var(--bg1); background-color:var(--accent); }
+.controllerWrapper:hover { color:var(--fg); }
 
 /*==================== central:graph view */
 .link { fill:none; stroke:var(--line); stroke-width:1px; }
@@ -184,18 +185,17 @@
 .node { cursor:pointer; }  
 	.node text { fill:var(--fg); padding:10px; text-decoration:none; }
 		.node:hover text, .node.selected text { text-decoration:underline; }
-		.node.active text { fill:var(--red); }
 		.node.selected text { fill:var(--purple); }
+		.node.suspended.selected text { fill:var(--red); }
 	.node circle { stroke:rgba(var(--rgb-blue), 0.5); stroke-width:2px; fill:var(--bg1); }
-		.node:hover circle, .node.collapsed:hover circle, .node.suspended:hover circle, .node.suspended.collapsed:hover circle { stroke:rgba(var(--rgb-purple), 0.8); }
-		.node.collapsed circle { stroke:rgba(var(--rgb-green), 0.8); fill:var(--bg2); }
-		.node.suspended circle { stroke:rgba(var(--rgb-orange), 0.5); stroke-width:2px }
-			.node.suspended.collapsed circle { stroke:rgba(var(--rgb-pink), 0.8); }
-			.node.suspended:hover circle, .node.suspended.collapsed:hover circle { fill:var(--orange);}
-		.node.active circle { stroke:rgba(var(--rgb-red), 0.5); stroke-width:2px; }
-		.node.selected circle, .node.selected:hover circle { stroke:rgba(var(--rgb-purple), 1); stroke-width:3px; fill:var(--bg); }
+		.node.collapsed circle { stroke:rgba(var(--rgb-green),.5); fill:var(--dark-green); }
+		.node.selected circle, .node:active circle { stroke:var(--purple); fill:var(--bg); stroke-width:3px; }
+		.node:hover circle { stroke:rgba(var(--rgb-purple),.8); fill:var(--dark-purple); }
+	.node.suspended circle { stroke:rgba(var(--rgb-orange), 0.5); }
+		.node.suspended.collapsed circle { stroke:rgba(var(--rgb-yellow),.5); fill:var(--dark-yellow); }
+		.node.suspended.selected circle, .node.suspended:active circle { stroke:var(--red); }
+		.node.suspended:hover circle { stroke:rgba(var(--rgb-red),.8); fill:var(--dark-red); }
 	.node.faded { opacity:0.2; }
-	.node.selected image { href:"/res/image/svg/Selected.svg"; }
 .ghostCircle.show { display:block; }
 .ghostCircle, .activeDrag .ghostCircle { display:none; }
 .contextMenu { z-index:1000; }
