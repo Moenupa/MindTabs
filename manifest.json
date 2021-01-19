@@ -3,7 +3,7 @@
 
     "manifest_version": 2,
 	"name": "MindTabs",
-	"version": "0.1.2", 
+	"version": "0.1.3", 
 	"description": "Mind map across your tabs. Smart way to organize your web.", 
     "icons": {
         "16": "/res/image/logo/MindTabs16.png",

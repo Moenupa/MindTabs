@@ -8,17 +8,14 @@
 	<!--Libraries-->
 	<link rel="stylesheet" type="text/css" href="/res/css/theme.min.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/jquery.contextMenu.min.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/jquery-ui.min.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/jquery-ui.structure.min.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/jquery-ui.theme.min.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/bootstrap-3.1.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/bootstrap-3.3.7.min.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/materialdesignicons.min.css" />
-	<link rel="stylesheet" type="text/css" href="/res/css/styles.min.css" />
+	<link rel="stylesheet" type="text/css" href="/res/css/styles.css" />
 	<link rel="stylesheet" type="text/css" href="/res/css/style-responsive.min.css" />
 
 	<script src="/res/js/jquery.min.js"></script>
-	<script src="/res/js/jquery-ui.min.js"></script>
-	<script src="/res/js/all.min.js"></script>
+	<script src="/res/js/bootstrap-3.3.7.min.js"></script>
+	<script src="/res/js/actions.js"></script>
 	<script src="/res/js/jquery.contextMenu.min.js"></script>
 </head>
 <body>
@@ -31,7 +28,7 @@
 				</div>
 			</div>
 			<div class="top-nav clearfix">
-				<ul class="top-menu pull-left notify-row">
+				<ul class="top-menu notify-row" style="float:left;">
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle tooltips btn-shadowed disabled rounded" data-placement="bottom" title="Windows opened">
 							<div class="mdi mdi-aspect-ratio"></div>
@@ -51,7 +48,7 @@
 						</a>
 					</li>
 				</ul>
-				<ul class="nav pull-right top-menu">
+				<ul class="nav top-menu" style="float:right;">
 					<li>
 						<input type="text" placeholder="&#xF0349 Search Tabs by URL or Title" class="form-control search searchControl shadowed" />
 					</li>
@@ -109,7 +106,7 @@
 					</ul>
 					<div class="aboutWrapper">
 						<a href="http://github.com/Moenupa" class="fg-purple">by Moenupa</a><br />
-						<small>BETA v0.1.2</small>
+						<small>BETA v0.1.3</small>
 					</div>
 
 				</div>
@@ -130,7 +127,7 @@
 							<header class="toolTip-header panel-heading shadowed">
 								<span class="mdi mdi-tooltip-text-outline" ></span>
 								<span class="panel-title">Tips</span>
-								<span class="tools pull-right">
+								<span class="tools pull-right" style="float:right;">
 									<a href="#" class="mdi mdi-arrow-expand-up tooltips panel-toggler" data-placement="top" title="SHOW / HIDE"></a>
 									<a href="#" class="mdi mdi-bell-off-outline tooltips panel-toggler" data-placement="top" title="DISABLE"></a>
 								</span>
@@ -139,58 +136,47 @@
 								<div id="tipsCarousel" class="carousel slide">
 									<div class="carousel-inner">
 										<div class="item active">
-											<img src="/res/image/logo/backgroundx25.png" alt="">
-											<div class="">
-												<div class="carousel-caption">
-													<p><b>1. Selection</b></p>
-													<p><small>All items are selectable. To perform actions at first select any item(s).</small></p>
-													<p><small>Or right click to select item and perform action from context menu.</small></p>
-												</div>
+											<div class="carousel-frame">
+												<p><b>1. Selection</b></p>
+												<p><small>All items are selectable. To perform actions at first select any item(s).</small></p>
+												<p><small>Or right click to select item and perform action from context menu.</small></p>
+
 											</div>
 										</div>
 										<div class="item">
-											<img src="/res/image/logo/backgroundx25.png" alt="">
-											<div class="container">
-												<div class="carousel-caption">
-													<p><b>2. Actions</b></p>
-													<p><small>Select any item(s) to perform actions (activated in left toolbar). This mode allows actions for multiple items.</small></p>
-													<p><small>Right click to perform action for single item from context menu.</small></p>
-												</div>
+											<div class="carousel-frame">
+												<p><b>2. Actions</b></p>
+												<p><small>Select any item(s) to perform actions (activated in left toolbar). This mode allows actions for multiple items.</small></p>
+												<p><small>Right click to perform action for single item from context menu.</small></p>
+
 											</div>
 										</div>
 										<div class="item">
-											<img src="/res/image/logo/backgroundx25.png" alt="">
-											<div class="container">
-												<div class="carousel-caption">
-													<p><b>3. Manage view</b></p>
-													<p><small>Click empty spave & drag it to any suitable position (or use arrow keys from keyboard).</small></p>
-													<p><small>Try zooming feature to get big picture of your data (or use <kbd>+</kbd> or <kbd>-</kbd> keys from keyboard).</small></p>
-												</div>
+											<div class="carousel-frame">
+												<p><b>3. Manage view</b></p>
+												<p><small>Click empty spave & drag it to any suitable position (or use arrow keys from keyboard).</small></p>
+												<p><small>Try zooming feature to get big picture of your data (or use <kbd>+</kbd> or <kbd>-</kbd> keys from keyboard).</small></p>
+
 											</div>
 										</div>
 										<div class="item">
-											<img src="/res/image/logo/backgroundx25.png" alt="">
-											<div class="container">
-												<div class="carousel-caption">
-													<p><b>4. Structure data</b></p>
-													<p><small>All nodes are automatically grouped by URL for your convenience.</small></p>
-													<p><small>Right click any window / group and click "expand"/"collapse" to show / hide it's contents.</small></p>
-												</div>
+											<div class="carousel-frame">
+												<p><b>4. Structure data</b></p>
+												<p><small>All nodes are automatically grouped by URL for your convenience.</small></p>
+												<p><small>Right click any window / group and click "expand"/"collapse" to show / hide it's contents.</small></p>
+
 											</div>
 										</div>
 										<div class="item">
-											<img src="/res/image/logo/backgroundx25.png" alt="">
-											<div class="container">
-												<div class="carousel-caption">
-													<p><b>5. Filter data</b></p>
-													<p><small>Use search to filter your data and get matching results. Only a few clicks to find the desired node!</small></p>
-													<p><small>Filtering by both website name and URL is supported. (e.g. accepts either of <code>Google</code> and <code>www.google.com</code>)</small></p>
-												</div>
+											<div class="carousel-frame">
+												<p><b>5. Filter data</b></p>
+												<p><small>Use search to filter your data and get matching results. Only a few clicks to find the desired node!</small></p>
+												<p><small>Filtering by both website name and URL is supported. (e.g. accepts either of <code>Google</code> and <code>www.google.com</code>)</small></p>
 											</div>
 										</div>
 									</div>
-									<a class="pull-left carousel-control left" href="#tipsCarousel" data-slide="prev">Previous</a>
-									<a class="pull-right carousel-control right" href="#tipsCarousel" data-slide="next">Next</a>
+									<a class="carousel-control left" href="#tipsCarousel" data-slide="prev" style="float:left;">Previous</a>
+									<a class="carousel-control right" href="#tipsCarousel" data-slide="next" style="float:right;">Next</a>
 								</div>
 							</div>
 						</section>
@@ -240,7 +226,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button aria-hidden="true" data-dismiss="modal" class="mdi mdi-close pull-right" type="button"></button>
+					<button aria-hidden="true" data-dismiss="modal" class="mdi mdi-close pull-right" type="button" style="float:right;"></button>
 					<h3>MindTabs</h3>
 				</div>
 				<div class="modal-body">
@@ -419,7 +405,7 @@
 				</div>
 				<div class="modal-footer">
 					<a href="https://github.com/Moenupa" target="_blank" class="fg-purple">by Moenupa</a><br />
-					<small>BETA v0.1.2</small>
+					<small>BETA v0.1.3</small>
 				</div>
 			</div>
 		</div>
@@ -428,7 +414,7 @@
 		<div id="welcome" class="modal-dialog" style="max-width: 400px">
 			<div class="modal-content">
 				<div class="modal-header">
-					<button aria-hidden="true" data-dismiss="modal" class="mdi mdi-close pull-right" type="button"></button>
+					<button aria-hidden="true" data-dismiss="modal" class="mdi mdi-close pull-right" type="button" style="float:right;"></button>
 					<h3>Welcome to MindTabs!</h3>
 				</div>
 				<div class="modal-body">
@@ -458,7 +444,7 @@
 				</div>
 				<div class="modal-footer">
 					<a href="https://github.com/Moenupa" target="_blank" class="fg-purple">by Moenupa</a><br />
-					<small>BETA v0.1.2</small>
+					<small>BETA v0.1.3</small>
 				</div>
 			</div>
 		</div>

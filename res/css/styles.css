@@ -88,7 +88,8 @@
 
 /*==================== global:key binding layout */
 	kbd { color:var(--fg); border:1px solid var(--border); box-shadow:1px 1px var(--border); background-color:var(--bg0); }
-	kbd .mdi::before { font-size:14px; }
+	kbd .mdi { padding:0 2px; }
+	kbd .mdi, kbd .mdi:before { font-size:14px; }
 
 /*==================== global:table layout */
 	.table { background-color:rgba(var(--rgb-bg2),.2); border:none; margin:0; }
@@ -98,7 +99,7 @@
 		.table-rounded { border-radius:6px; overflow:hidden; } 
 	.table-centered { text-align:center; border:none; }
 		.table-centered td, .table-centered th { text-align:inherit; }
-		.table-striped>tbody>tr:nth-child(odd)>td { background-color:rgba(var(--rgb-bg2),.2); }
+		.table-striped>tbody>tr:nth-of-type(odd) { background-color:rgba(var(--rgb-bg),.2); }
 	
 
 /*==================== global:badge - primary/success/warning/important */
@@ -187,7 +188,8 @@
 		.node:hover text, .node.selected text { text-decoration:underline; }
 		.node.selected text { fill:var(--purple); }
 		.node.suspended.selected text { fill:var(--red); }
-	.node circle { stroke:rgba(var(--rgb-blue), 0.5); stroke-width:2px; fill:var(--bg1); }
+	.node circle { stroke:rgba(var(--rgb-blue), 0.5); stroke-width:2px; fill:var(--bg1); } 
+		.node.active circle { stroke:rgba(var(--rgb-red), 0.5); }
 		.node.collapsed circle { stroke:rgba(var(--rgb-green),.5); fill:var(--dark-green); }
 		.node.selected circle, .node:active circle { stroke:var(--purple); fill:var(--bg); stroke-width:3px; }
 		.node:hover circle { stroke:rgba(var(--rgb-purple),.8); fill:var(--dark-purple); }
@@ -202,16 +204,15 @@
 .contextMenu.show { display:block; }
 
 /*==================== global:carousel */
-.carousel img { height:120px; }
-.carousel-caption { position:absolute; left:0; right:0; top:0px; z-index:10; padding-top:0; padding-bottom:0; color:var(--fg1); text-align:left; text-shadow:none; }
-	.carousel-caption b { font-size:12px; }
 .carousel-control,.carousel-control:focus { position:relative; color:var(--gray); text-shadow:none; width:auto; }
 	.carousel-control.left, .carousel-control.right { background:transparent; color:var(--accent); font-size:12px; z-index:11; opacity:1; }
 	.carousel-control.right:after, .carousel-control.left:before { color:var(--gray); font-family:"Material Design Icons"; position:relative; }
 	.carousel-control.right:after { content:var(--mdi-arrow-right); margin-left:2px; }
 	.carousel-control.left:before { content:var(--mdi-arrow-left); margin-right:2px; }
 	.carousel-control:hover, .carousel-control.left:hover:before, .carousel-control.right:hover:after { color:var(--purple); text-decoration:none; }
-.carousel-inner h3 { font-size:16px; font-weight:300; margin:0; }
+.carousel-frame { display:block; height: 130px; width: 320px; position: relative; z-index:1; }
+.carousel-frame * { color:var(--fg1); z-index:1; }
+.carousel-frame::after { content: ""; background: no-repeat 100% 90% url("/res/image/logo/MindTabs64.png"); position: absolute; left: 0; right: 0; top:0; bottom:0; opacity:.2; z-index:-1; }
 
 /*==================== global: buttons */
 [class*=btn].rounded { border-radius:50%; width:var(--container-size) !important; height:var(--container-size); font-size:var(--content-size); box-shadow:none; }
