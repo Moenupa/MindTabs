@@ -219,7 +219,7 @@
 	[class*=btn].rounded .mdi, [class*=btn].rounded .mdi { padding:var(--container-padding); }
 [class*=btn]:hover, [class*=btn]:active { cursor:pointer; color:var(--bg1); }
 [class*=btn]:hover { background-color:var(--accent); }
-[class*=btn]:active { background-color:rgba(var(--rgb-accent),.5); }
+[class*=btn]:active { background-color:var(--dark-accent); }
 [class*=btn].disabled:hover, [class*=btn].disabled:active { color:var(--accent); }
 [class*=btn].disabled:hover { cursor:default; background-color:rgba(var(--rgb-gray),.1); }
 [class*=btn].disabled:active { cursor:not-allowed; background-color:rgba(var(--rgb-gray),.5); }
@@ -234,15 +234,15 @@
 		.search:active::placeholder, .search:focus::placeholder { color:var(--bg); }
 
 /*==================== global:shadow effect */
-[class*=shadowed] { box-shadow: inset 1px 1px rgba(255,255,255,.3), inset -1px -1px rgba(255,255,255,.1), 1px 1px rgba(0,0,0,.3); }
+[class*=shadowed] { box-shadow: inset 1px 1px 2px rgba(255,255,255,.3), inset -1px -1px 2px rgba(255,255,255,.1), 1px 1px rgba(0,0,0,.3); }
 .btn-shadowed { background-color:var(--bg); text-align:center; display:inline-block; line-height:1; transition:.2s all ease-in-out; box-shadow: none;}
-.btn-shadowed:hover { box-shadow: inset 1px 1px rgba(255,255,255,.3), inset -1px -1px rgba(255,255,255,.1), 1px 1px rgba(0,0,0,.3); }
-.btn-shadowed:active { box-shadow: inset 1px 1px rgba(0,0,0,.3), inset -1px -1px rgba(0,0,0,.1); }
+.btn-shadowed:hover { box-shadow: inset 1px 1px 2px rgba(255,255,255,.3), inset -1px -1px 2px rgba(255,255,255,.1), 1px 1px rgba(0,0,0,.3); }
+.btn-shadowed:active { box-shadow: inset 1px 1px 2px rgba(0,0,0,.3), inset -1px -1px 2px rgba(0,0,0,.1); }
 .btn-shadowed.disabled:hover, .btn-shadowed.disabled { box-shadow: none; }
-.btn-shadowed.disabled:active { box-shadow: inset .5px .5px rgba(0,0,0,.3), inset -.5px -.5px rgba(0,0,0,.1); }
+.btn-shadowed.disabled:active { box-shadow: inset .5px .5px 1px rgba(0,0,0,.3), inset -.5px -.5px 1px rgba(0,0,0,.1); }
 .search { box-shadow: none; }
-.search:hover,.search:active { box-shadow: inset 1px 1px rgba(0,0,0,.3), inset -1px -1px rgba(0,0,0,.1); }
-.search:active,.search:focus { box-shadow: inset 1px 1px rgba(255,255,255,.3), inset -1px -1px rgba(255,255,255,.1), 1px 1px rgba(0,0,0,.3); }
+.search:hover,.search:active { box-shadow: inset 1px 1px 2px rgba(0,0,0,.3), inset -1px -1px 2px rgba(0,0,0,.1); }
+.search:active,.search:focus { box-shadow: inset 1px 1px 2px rgba(255,255,255,.3), inset -1px -1px 2px rgba(255,255,255,.1), 1px 1px rgba(0,0,0,.3); }
 
 /*==================== midleft:logo and menu icon */
 .brand { background:none repeat scroll 0 0 rgba(var(--rgb-accent),.5); float:left; height:80px; position:relative; width:165px; text-align:right; padding:var(--menu-padding); font-size:var(--content-size); line-height:1; transition:.3s all ease-in-out; }

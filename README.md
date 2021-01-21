@@ -14,7 +14,7 @@ MindTab's work is based on the GraphiTabs extension, and is currently not releas
 
 **Please consider to support the ORIGINAL author via [GraphiTabs](https://chrome.google.com/webstore/detail/graphitabs/dcfclemgmkccmnpgnldhldjmflphkimp) FIRST,** *(and please try to establish contact if possible)*. Then if you are not satisfied with GraphiTabs, consider switching to MindTabs.
 
-## Features
+## Hightlights
 
 The **MindTabs** Extension, compared to **GraphiTabs**, improves only on UI.
 

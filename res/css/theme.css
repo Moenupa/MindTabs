@@ -38,6 +38,7 @@
     --pink  : #E6405F; --rgb-pink  : 230, 64, 95; --dark-pink  : #F29FAF; --bright-pink  : #FF2D55;
 
     --accent: var(--blue); --rgb-accent: var(--rgb-blue);
+    --dark-accent: var(--dark-blue); --bright-accent: var(--bright-blue);
 }
 
 :root[data-theme="dark"] { /* dark theme */
@@ -65,4 +66,5 @@
     --pink  : #CC66A3; --rgb-pink  : 204,102,163; --dark-pink  : #754260; --bright-pink  : #FF80CC;
 
     --accent: var(--blue); --rgb-accent: var(--rgb-blue);
+    --dark-accent: var(--dark-blue); --bright-accent: var(--bright-blue);
 }
